@@ -1,0 +1,1148 @@
+{
+ "caveat": "Reported rents are contract rents of sitting tenants under rent control, not market asking rents.",
+ "generated_from": "inventory_clean.parquet",
+ "rows": 550201,
+ "tenant_rows": 478627,
+ "submission_years": [
+  2022,
+  2023,
+  2024,
+  2025,
+  2026
+ ],
+ "rent_by_tenure": [
+  {
+   "bedrooms": 0,
+   "label": "Studio",
+   "points": [
+    {
+     "tenure": 0,
+     "median": 1875.5,
+     "n": 6712
+    },
+    {
+     "tenure": 1,
+     "median": 1875.5,
+     "n": 27413
+    },
+    {
+     "tenure": 2,
+     "median": 1875.5,
+     "n": 18827
+    },
+    {
+     "tenure": 3,
+     "median": 1875.5,
+     "n": 12035
+    },
+    {
+     "tenure": 4,
+     "median": 1875.5,
+     "n": 8703
+    },
+    {
+     "tenure": 5,
+     "median": 1875.5,
+     "n": 5787
+    },
+    {
+     "tenure": 6,
+     "median": 1875.5,
+     "n": 2637
+    },
+    {
+     "tenure": 7,
+     "median": 1625.5,
+     "n": 1508
+    },
+    {
+     "tenure": 8,
+     "median": 1625.5,
+     "n": 1269
+    },
+    {
+     "tenure": 9,
+     "median": 1375.5,
+     "n": 1175
+    },
+    {
+     "tenure": 10,
+     "median": 1375.5,
+     "n": 1148
+    },
+    {
+     "tenure": 11,
+     "median": 1375.5,
+     "n": 1293
+    },
+    {
+     "tenure": 12,
+     "median": 1375.5,
+     "n": 1615
+    },
+    {
+     "tenure": 13,
+     "median": 1375.5,
+     "n": 1817
+    },
+    {
+     "tenure": 14,
+     "median": 1375.5,
+     "n": 1913
+    },
+    {
+     "tenure": 15,
+     "median": 1375.5,
+     "n": 1808
+    },
+    {
+     "tenure": 16,
+     "median": 1375.5,
+     "n": 1707
+    },
+    {
+     "tenure": 17,
+     "median": 1375.5,
+     "n": 1568
+    },
+    {
+     "tenure": 18,
+     "median": 1125.5,
+     "n": 1404
+    },
+    {
+     "tenure": 19,
+     "median": 1125.5,
+     "n": 1484
+    },
+    {
+     "tenure": 20,
+     "median": 1125.5,
+     "n": 1480
+    },
+    {
+     "tenure": 21,
+     "median": 1125.5,
+     "n": 1391
+    },
+    {
+     "tenure": 22,
+     "median": 1125.5,
+     "n": 1115
+    },
+    {
+     "tenure": 23,
+     "median": 1125.5,
+     "n": 864
+    },
+    {
+     "tenure": 24,
+     "median": 1125.5,
+     "n": 683
+    },
+    {
+     "tenure": 25,
+     "median": 875.5,
+     "n": 651
+    },
+    {
+     "tenure": 26,
+     "median": 875.5,
+     "n": 759
+    },
+    {
+     "tenure": 27,
+     "median": 875.5,
+     "n": 925
+    },
+    {
+     "tenure": 28,
+     "median": 875.5,
+     "n": 1057
+    },
+    {
+     "tenure": 29,
+     "median": 875.5,
+     "n": 1120
+    },
+    {
+     "tenure": 30,
+     "median": 875.5,
+     "n": 1129
+    },
+    {
+     "tenure": 31,
+     "median": 875.5,
+     "n": 1049
+    },
+    {
+     "tenure": 32,
+     "median": 875.5,
+     "n": 850
+    },
+    {
+     "tenure": 33,
+     "median": 875.5,
+     "n": 664
+    },
+    {
+     "tenure": 34,
+     "median": 875.5,
+     "n": 522
+    },
+    {
+     "tenure": 35,
+     "median": 875.5,
+     "n": 461
+    },
+    {
+     "tenure": 36,
+     "median": 875.5,
+     "n": 400
+    },
+    {
+     "tenure": 37,
+     "median": 875.5,
+     "n": 298
+    },
+    {
+     "tenure": 38,
+     "median": 875.5,
+     "n": 288
+    },
+    {
+     "tenure": 39,
+     "median": 875.5,
+     "n": 236
+    },
+    {
+     "tenure": 40,
+     "median": 875.5,
+     "n": 246
+    }
+   ]
+  },
+  {
+   "bedrooms": 1,
+   "label": "1 bedroom",
+   "points": [
+    {
+     "tenure": 0,
+     "median": 2875.5,
+     "n": 8759
+    },
+    {
+     "tenure": 1,
+     "median": 2875.5,
+     "n": 38832
+    },
+    {
+     "tenure": 2,
+     "median": 2625.5,
+     "n": 29692
+    },
+    {
+     "tenure": 3,
+     "median": 2625.5,
+     "n": 20596
+    },
+    {
+     "tenure": 4,
+     "median": 2625.5,
+     "n": 14889
+    },
+    {
+     "tenure": 5,
+     "median": 2625.5,
+     "n": 10221
+    },
+    {
+     "tenure": 6,
+     "median": 2625.5,
+     "n": 5004
+    },
+    {
+     "tenure": 7,
+     "median": 2625.5,
+     "n": 2572
+    },
+    {
+     "tenure": 8,
+     "median": 2625.5,
+     "n": 1960
+    },
+    {
+     "tenure": 9,
+     "median": 2375.5,
+     "n": 1632
+    },
+    {
+     "tenure": 10,
+     "median": 2125.5,
+     "n": 1536
+    },
+    {
+     "tenure": 11,
+     "median": 2125.5,
+     "n": 1728
+    },
+    {
+     "tenure": 12,
+     "median": 1875.5,
+     "n": 2184
+    },
+    {
+     "tenure": 13,
+     "median": 1875.5,
+     "n": 2484
+    },
+    {
+     "tenure": 14,
+     "median": 1875.5,
+     "n": 2612
+    },
+    {
+     "tenure": 15,
+     "median": 1875.5,
+     "n": 2585
+    },
+    {
+     "tenure": 16,
+     "median": 1875.5,
+     "n": 2458
+    },
+    {
+     "tenure": 17,
+     "median": 1875.5,
+     "n": 2166
+    },
+    {
+     "tenure": 18,
+     "median": 1625.5,
+     "n": 2027
+    },
+    {
+     "tenure": 19,
+     "median": 1625.5,
+     "n": 2160
+    },
+    {
+     "tenure": 20,
+     "median": 1625.5,
+     "n": 2184
+    },
+    {
+     "tenure": 21,
+     "median": 1625.5,
+     "n": 2025
+    },
+    {
+     "tenure": 22,
+     "median": 1625.5,
+     "n": 1597
+    },
+    {
+     "tenure": 23,
+     "median": 1625.5,
+     "n": 1286
+    },
+    {
+     "tenure": 24,
+     "median": 1625.5,
+     "n": 961
+    },
+    {
+     "tenure": 25,
+     "median": 1375.5,
+     "n": 836
+    },
+    {
+     "tenure": 26,
+     "median": 1375.5,
+     "n": 945
+    },
+    {
+     "tenure": 27,
+     "median": 1125.5,
+     "n": 1159
+    },
+    {
+     "tenure": 28,
+     "median": 1125.5,
+     "n": 1432
+    },
+    {
+     "tenure": 29,
+     "median": 1125.5,
+     "n": 1558
+    },
+    {
+     "tenure": 30,
+     "median": 1125.5,
+     "n": 1595
+    },
+    {
+     "tenure": 31,
+     "median": 1125.5,
+     "n": 1505
+    },
+    {
+     "tenure": 32,
+     "median": 1125.5,
+     "n": 1320
+    },
+    {
+     "tenure": 33,
+     "median": 1125.5,
+     "n": 1138
+    },
+    {
+     "tenure": 34,
+     "median": 1125.5,
+     "n": 928
+    },
+    {
+     "tenure": 35,
+     "median": 1125.5,
+     "n": 802
+    },
+    {
+     "tenure": 36,
+     "median": 1125.5,
+     "n": 746
+    },
+    {
+     "tenure": 37,
+     "median": 1125.5,
+     "n": 593
+    },
+    {
+     "tenure": 38,
+     "median": 1125.5,
+     "n": 508
+    },
+    {
+     "tenure": 39,
+     "median": 1125.5,
+     "n": 436
+    },
+    {
+     "tenure": 40,
+     "median": 1125.5,
+     "n": 401
+    }
+   ]
+  },
+  {
+   "bedrooms": 2,
+   "label": "2 bedroom",
+   "points": [
+    {
+     "tenure": 0,
+     "median": 3875.5,
+     "n": 5144
+    },
+    {
+     "tenure": 1,
+     "median": 3625.5,
+     "n": 23747
+    },
+    {
+     "tenure": 2,
+     "median": 3625.5,
+     "n": 18419
+    },
+    {
+     "tenure": 3,
+     "median": 3625.5,
+     "n": 12396
+    },
+    {
+     "tenure": 4,
+     "median": 3375.5,
+     "n": 8674
+    },
+    {
+     "tenure": 5,
+     "median": 3375.5,
+     "n": 5961
+    },
+    {
+     "tenure": 6,
+     "median": 3375.5,
+     "n": 2987
+    },
+    {
+     "tenure": 7,
+     "median": 3375.5,
+     "n": 1582
+    },
+    {
+     "tenure": 8,
+     "median": 3375.5,
+     "n": 1264
+    },
+    {
+     "tenure": 9,
+     "median": 3125.5,
+     "n": 1037
+    },
+    {
+     "tenure": 10,
+     "median": 2875.5,
+     "n": 1036
+    },
+    {
+     "tenure": 11,
+     "median": 2875.5,
+     "n": 1127
+    },
+    {
+     "tenure": 12,
+     "median": 2625.5,
+     "n": 1386
+    },
+    {
+     "tenure": 13,
+     "median": 2625.5,
+     "n": 1608
+    },
+    {
+     "tenure": 14,
+     "median": 2375.5,
+     "n": 1747
+    },
+    {
+     "tenure": 15,
+     "median": 2375.5,
+     "n": 1796
+    },
+    {
+     "tenure": 16,
+     "median": 2375.5,
+     "n": 1521
+    },
+    {
+     "tenure": 17,
+     "median": 2375.5,
+     "n": 1303
+    },
+    {
+     "tenure": 18,
+     "median": 2375.5,
+     "n": 1242
+    },
+    {
+     "tenure": 19,
+     "median": 2125.5,
+     "n": 1256
+    },
+    {
+     "tenure": 20,
+     "median": 2125.5,
+     "n": 1359
+    },
+    {
+     "tenure": 21,
+     "median": 2125.5,
+     "n": 1256
+    },
+    {
+     "tenure": 22,
+     "median": 2125.5,
+     "n": 999
+    },
+    {
+     "tenure": 23,
+     "median": 2125.5,
+     "n": 840
+    },
+    {
+     "tenure": 24,
+     "median": 2125.5,
+     "n": 555
+    },
+    {
+     "tenure": 25,
+     "median": 1875.5,
+     "n": 472
+    },
+    {
+     "tenure": 26,
+     "median": 1625.5,
+     "n": 562
+    },
+    {
+     "tenure": 27,
+     "median": 1625.5,
+     "n": 646
+    },
+    {
+     "tenure": 28,
+     "median": 1625.5,
+     "n": 836
+    },
+    {
+     "tenure": 29,
+     "median": 1625.5,
+     "n": 938
+    },
+    {
+     "tenure": 30,
+     "median": 1625.5,
+     "n": 1049
+    },
+    {
+     "tenure": 31,
+     "median": 1625.5,
+     "n": 1019
+    },
+    {
+     "tenure": 32,
+     "median": 1625.5,
+     "n": 906
+    },
+    {
+     "tenure": 33,
+     "median": 1625.5,
+     "n": 737
+    },
+    {
+     "tenure": 34,
+     "median": 1625.5,
+     "n": 588
+    },
+    {
+     "tenure": 35,
+     "median": 1625.5,
+     "n": 510
+    },
+    {
+     "tenure": 36,
+     "median": 1375.5,
+     "n": 422
+    },
+    {
+     "tenure": 37,
+     "median": 1375.5,
+     "n": 361
+    },
+    {
+     "tenure": 38,
+     "median": 1375.5,
+     "n": 298
+    },
+    {
+     "tenure": 39,
+     "median": 1375.5,
+     "n": 251
+    },
+    {
+     "tenure": 40,
+     "median": 1375.5,
+     "n": 244
+    }
+   ]
+  }
+ ],
+ "tenure_cohorts": [
+  {
+   "band": "0-2 yrs",
+   "median": 2875.5,
+   "n": 191742,
+   "pct_below_recent": 0.0,
+   "share_of_stock": 42.6
+  },
+  {
+   "band": "3-5 yrs",
+   "median": 2625.5,
+   "n": 108012,
+   "pct_below_recent": -8.7,
+   "share_of_stock": 24.0
+  },
+  {
+   "band": "6-10 yrs",
+   "median": 2625.5,
+   "n": 31140,
+   "pct_below_recent": -8.7,
+   "share_of_stock": 6.9
+  },
+  {
+   "band": "11-15 yrs",
+   "median": 1875.5,
+   "n": 30106,
+   "pct_below_recent": -34.8,
+   "share_of_stock": 6.7
+  },
+  {
+   "band": "16-20 yrs",
+   "median": 1625.5,
+   "n": 27268,
+   "pct_below_recent": -43.5,
+   "share_of_stock": 6.1
+  },
+  {
+   "band": "21-25 yrs",
+   "median": 1625.5,
+   "n": 16618,
+   "pct_below_recent": -43.5,
+   "share_of_stock": 3.7
+  },
+  {
+   "band": "26-30 yrs",
+   "median": 1125.5,
+   "n": 16661,
+   "pct_below_recent": -60.9,
+   "share_of_stock": 3.7
+  },
+  {
+   "band": "31+ yrs",
+   "median": 1125.5,
+   "n": 28164,
+   "pct_below_recent": -60.9,
+   "share_of_stock": 6.3
+  }
+ ],
+ "neighborhoods": [
+  {
+   "neighborhood": "Mission Bay",
+   "n": 13835,
+   "median_rent": 3625.5,
+   "rent_n": 12976,
+   "vacancy_pct": 3.2,
+   "sro_pct": 0.0,
+   "median_year_built": 2015,
+   "median_tenure": 2.0,
+   "median_sqft": 875.5
+  },
+  {
+   "neighborhood": "Financial District/South Beach",
+   "n": 24723,
+   "median_rent": 3125.5,
+   "rent_n": 21737,
+   "vacancy_pct": 7.62,
+   "sro_pct": 3.9,
+   "median_year_built": 1987,
+   "median_tenure": 2.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "Potrero Hill",
+   "n": 8704,
+   "median_rent": 3125.5,
+   "rent_n": 7711,
+   "vacancy_pct": 3.99,
+   "sro_pct": 0.1,
+   "median_year_built": 2003,
+   "median_tenure": 2.0,
+   "median_sqft": 875.5
+  },
+  {
+   "neighborhood": "Bayview Hunters Point",
+   "n": 5266,
+   "median_rent": 2875.5,
+   "rent_n": 4279,
+   "vacancy_pct": 4.04,
+   "sro_pct": 0.1,
+   "median_year_built": 1989,
+   "median_tenure": 4.0,
+   "median_sqft": 875.5
+  },
+  {
+   "neighborhood": "Marina",
+   "n": 31790,
+   "median_rent": 2875.5,
+   "rent_n": 28945,
+   "vacancy_pct": 3.98,
+   "sro_pct": 0.5,
+   "median_year_built": 1927,
+   "median_tenure": 3.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "Noe Valley",
+   "n": 10914,
+   "median_rent": 2875.5,
+   "rent_n": 9056,
+   "vacancy_pct": 4.3,
+   "sro_pct": 0.3,
+   "median_year_built": 1941,
+   "median_tenure": 3.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "Pacific Heights",
+   "n": 31502,
+   "median_rent": 2875.5,
+   "rent_n": 28570,
+   "vacancy_pct": 5.03,
+   "sro_pct": 0.4,
+   "median_year_built": 1928,
+   "median_tenure": 3.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "West of Twin Peaks",
+   "n": 4718,
+   "median_rent": 2875.5,
+   "rent_n": 3061,
+   "vacancy_pct": 2.63,
+   "sro_pct": 0.1,
+   "median_year_built": 1941,
+   "median_tenure": 4.0,
+   "median_sqft": 875.5
+  },
+  {
+   "neighborhood": "Bernal Heights",
+   "n": 4828,
+   "median_rent": 2625.5,
+   "rent_n": 3684,
+   "vacancy_pct": 3.58,
+   "sro_pct": 0.2,
+   "median_year_built": 1915,
+   "median_tenure": 4.0,
+   "median_sqft": 875.5
+  },
+  {
+   "neighborhood": "Castro/Upper Market",
+   "n": 18222,
+   "median_rent": 2625.5,
+   "rent_n": 15729,
+   "vacancy_pct": 3.84,
+   "sro_pct": 0.7,
+   "median_year_built": 1925,
+   "median_tenure": 4.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "Haight Ashbury",
+   "n": 14582,
+   "median_rent": 2625.5,
+   "rent_n": 12988,
+   "vacancy_pct": 4.51,
+   "sro_pct": 0.4,
+   "median_year_built": 1908,
+   "median_tenure": 3.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "Inner Sunset",
+   "n": 15731,
+   "median_rent": 2625.5,
+   "rent_n": 13919,
+   "vacancy_pct": 3.43,
+   "sro_pct": 0.5,
+   "median_year_built": 1950,
+   "median_tenure": 4.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "Lakeshore",
+   "n": 21024,
+   "median_rent": 2625.5,
+   "rent_n": 17577,
+   "vacancy_pct": 16.06,
+   "sro_pct": 0.0,
+   "median_year_built": 1949,
+   "median_tenure": 5.0,
+   "median_sqft": 875.5
+  },
+  {
+   "neighborhood": "Lone Mountain/USF",
+   "n": 9359,
+   "median_rent": 2625.5,
+   "rent_n": 8243,
+   "vacancy_pct": 4.23,
+   "sro_pct": 0.9,
+   "median_year_built": 1925,
+   "median_tenure": 3.0,
+   "median_sqft": 875.5
+  },
+  {
+   "neighborhood": "Presidio Heights",
+   "n": 7562,
+   "median_rent": 2625.5,
+   "rent_n": 6519,
+   "vacancy_pct": 5.62,
+   "sro_pct": 1.5,
+   "median_year_built": 1928,
+   "median_tenure": 3.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "Russian Hill",
+   "n": 23802,
+   "median_rent": 2625.5,
+   "rent_n": 20815,
+   "vacancy_pct": 6.59,
+   "sro_pct": 3.2,
+   "median_year_built": 1922,
+   "median_tenure": 3.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "Hayes Valley",
+   "n": 21945,
+   "median_rent": 2375.5,
+   "rent_n": 19996,
+   "vacancy_pct": 5.13,
+   "sro_pct": 1.4,
+   "median_year_built": 1922,
+   "median_tenure": 3.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "Inner Richmond",
+   "n": 13519,
+   "median_rent": 2375.5,
+   "rent_n": 11715,
+   "vacancy_pct": 3.92,
+   "sro_pct": 0.7,
+   "median_year_built": 1924,
+   "median_tenure": 4.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "Mission",
+   "n": 41078,
+   "median_rent": 2375.5,
+   "rent_n": 36031,
+   "vacancy_pct": 5.97,
+   "sro_pct": 4.8,
+   "median_year_built": 1916,
+   "median_tenure": 4.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "Outer Richmond",
+   "n": 21247,
+   "median_rent": 2375.5,
+   "rent_n": 18372,
+   "vacancy_pct": 3.53,
+   "sro_pct": 0.2,
+   "median_year_built": 1930,
+   "median_tenure": 5.0,
+   "median_sqft": 875.5
+  },
+  {
+   "neighborhood": "South of Market",
+   "n": 22600,
+   "median_rent": 2375.5,
+   "rent_n": 20543,
+   "vacancy_pct": 6.45,
+   "sro_pct": 4.8,
+   "median_year_built": 2010,
+   "median_tenure": 2.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "Sunset/Parkside",
+   "n": 15193,
+   "median_rent": 2375.5,
+   "rent_n": 12074,
+   "vacancy_pct": 3.11,
+   "sro_pct": 0.1,
+   "median_year_built": 1948,
+   "median_tenure": 5.0,
+   "median_sqft": 875.5
+  },
+  {
+   "neighborhood": "Twin Peaks",
+   "n": 5758,
+   "median_rent": 2375.5,
+   "rent_n": 5216,
+   "vacancy_pct": 3.79,
+   "sro_pct": 0.8,
+   "median_year_built": 1964,
+   "median_tenure": 5.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "Western Addition",
+   "n": 22561,
+   "median_rent": 2375.5,
+   "rent_n": 20439,
+   "vacancy_pct": 6.18,
+   "sro_pct": 0.3,
+   "median_year_built": 1929,
+   "median_tenure": 3.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "North Beach",
+   "n": 12575,
+   "median_rent": 2125.5,
+   "rent_n": 10646,
+   "vacancy_pct": 7.83,
+   "sro_pct": 8.5,
+   "median_year_built": 1922,
+   "median_tenure": 3.0,
+   "median_sqft": 625.5
+  },
+  {
+   "neighborhood": "Outer Mission",
+   "n": 3836,
+   "median_rent": 2125.5,
+   "rent_n": 3122,
+   "vacancy_pct": 5.27,
+   "sro_pct": 0.7,
+   "median_year_built": 1952,
+   "median_tenure": 3.0,
+   "median_sqft": 875.5
+  },
+  {
+   "neighborhood": "Nob Hill",
+   "n": 50680,
+   "median_rent": 1875.5,
+   "rent_n": 44929,
+   "vacancy_pct": 8.22,
+   "sro_pct": 4.1,
+   "median_year_built": 1913,
+   "median_tenure": 3.0,
+   "median_sqft": 375.5
+  },
+  {
+   "neighborhood": "Tenderloin",
+   "n": 42374,
+   "median_rent": 1625.5,
+   "rent_n": 36178,
+   "vacancy_pct": 11.94,
+   "sro_pct": 5.1,
+   "median_year_built": 1922,
+   "median_tenure": 3.0,
+   "median_sqft": 375.5
+  },
+  {
+   "neighborhood": "Chinatown",
+   "n": 17654,
+   "median_rent": 875.5,
+   "rent_n": 14302,
+   "vacancy_pct": 14.28,
+   "sro_pct": 53.5,
+   "median_year_built": 1908,
+   "median_tenure": 6.0,
+   "median_sqft": 125.0
+  }
+ ],
+ "bedroom_table": [
+  {
+   "bedrooms": 0,
+   "n": 128027,
+   "median": 1625.5,
+   "mean": 1658.752411600678,
+   "p10": 625.5,
+   "p90": 2375.5
+  },
+  {
+   "bedrooms": 1,
+   "n": 195695,
+   "median": 2375.5,
+   "mean": 2418.7544035361148,
+   "p10": 1125.5,
+   "p90": 3375.5
+  },
+  {
+   "bedrooms": 2,
+   "n": 119191,
+   "median": 3125.5,
+   "mean": 3207.8127291490127,
+   "p10": 1375.5,
+   "p90": 4875.5
+  },
+  {
+   "bedrooms": 3,
+   "n": 27846,
+   "median": 4125.5,
+   "mean": 4092.944947209653,
+   "p10": 1625.5,
+   "p90": 6375.5
+  },
+  {
+   "bedrooms": 4,
+   "n": 5696,
+   "median": 4875.5,
+   "mean": 4809.305565308989,
+   "p10": 1875.5,
+   "p90": 7500.0
+  },
+  {
+   "bedrooms": 5,
+   "n": 1341,
+   "median": 6375.5,
+   "mean": 5782.190902311708,
+   "p10": 2375.5,
+   "p90": 7500.0
+  }
+ ],
+ "vacancy_trend": [
+  {
+   "year": 2022,
+   "n": 66744,
+   "vacancy_pct": 9.09
+  },
+  {
+   "year": 2023,
+   "n": 107886,
+   "vacancy_pct": 7.2
+  },
+  {
+   "year": 2024,
+   "n": 111513,
+   "vacancy_pct": 7.5
+  },
+  {
+   "year": 2025,
+   "n": 132088,
+   "vacancy_pct": 6.06
+  },
+  {
+   "year": 2026,
+   "n": 131970,
+   "vacancy_pct": 4.45
+  }
+ ],
+ "vacancy_by_building_size": [
+  {
+   "size": "1-4",
+   "n": 109677,
+   "vacancy_pct": 4.02
+  },
+  {
+   "size": "5-10",
+   "n": 72471,
+   "vacancy_pct": 4.36
+  },
+  {
+   "size": "11-50",
+   "n": 213367,
+   "vacancy_pct": 7.12
+  },
+  {
+   "size": "51-100",
+   "n": 51024,
+   "vacancy_pct": 11.54
+  },
+  {
+   "size": "100+",
+   "n": 100100,
+   "vacancy_pct": 7.24
+  }
+ ],
+ "utilities": {
+  "water_sewer": 52.3,
+  "refuse_recycling": 52.7,
+  "natural_gas": 9.5,
+  "electricity": 5.7
+ },
+ "quality": {
+  "rows": 550201,
+  "bedroom_unparsed": 61,
+  "bathroom_unparsed": 18,
+  "rent_missing_pct": 12.07,
+  "no_rent_paid": 3591,
+  "date_flags": 2359,
+  "vacant_no_date": 43.5,
+  "history_json_pct": 14.7,
+  "sro_rows": 21032
+ }
+}

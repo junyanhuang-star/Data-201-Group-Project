@@ -1,0 +1,10 @@
+# Raw open-data download, 198 MB - over GitHub's 100 MB per-file limit.
+# DATA_DICTIONARY.md identifies exactly which extract this is so it can be refetched.
+Rent_Board_Housing_Inventory_20260913.csv
+
+# Build artifacts, all regenerable from the CSV:
+#   inventory_clean.parquet  <- clean_inventory.py
+#   load/                    <- load_3nf.py staging TSVs, ~78 MB
+inventory_clean.parquet
+load/
+__pycache__/
