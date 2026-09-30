@@ -1,9 +1,11 @@
 -- ============================================================================
 -- SF Rent Board Housing Inventory -- 3NF schema (MySQL 8.0.16+)
 --
--- Source : Rent_Board_Housing_Inventory_20260913.csv
+-- Source : Rent_Board_Housing_Inventory_flat_final.csv
 --          550,201 rows / 28 columns; one row per rental unit per filing year.
 --          `unique_id` is unique across all 550,201 rows (0 duplicates).
+--          The local flat file has blank block/neighborhood/district labels;
+--          those location relationships therefore remain nullable when loaded.
 --
 -- Run    : mysql -u <user> -p < schema_3nf.sql
 --          then  .venv/bin/python house/load_3nf.py
@@ -424,7 +426,7 @@ CREATE INDEX ix_record_quality_flag ON record_quality_flag (flag_id);
 
 INSERT INTO extract_batch (batch_id, data_as_of, data_loaded_at, source_filename, row_count) VALUES
     (1, '2026-09-03 01:32:48', '2026-09-10 06:11:33',
-        'Rent_Board_Housing_Inventory_20260913.csv', 550201);
+        'Rent_Board_Housing_Inventory_flat_final.csv', 550201);
 
 INSERT INTO filing_cycle (submission_year, case_type_name) VALUES
     (2022, 'Housing Inventory - Unit information (2022)'),
