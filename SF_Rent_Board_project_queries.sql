@@ -42,24 +42,21 @@ WHERE ot.name = 'Occupied by non-owner'
 GROUP BY r.submission_year
 ORDER BY r.submission_year;
 
--- Q5. Neighborhood-level tenant rent summary for closed rent bands.
--- Coordinates are privacy-jittered; neighborhood is suitable for aggregate
--- analysis, but the point should not be interpreted as a building location.
-SELECT n.name AS neighborhood,
+-- Q5. Filing-year tenant rent summary for closed rent bands.
+-- The supplied local flat CSV has blank neighborhood and district labels, so
+-- this version uses dimensions that are populated in the actual input file.
+SELECT r.submission_year,
        COUNT(*) AS tenant_units_with_closed_rent_band,
        ROUND(AVG((rb.rent_min + rb.rent_max) / 2), 2) AS avg_band_midpoint
 FROM unit_record r
 JOIN occupancy_type ot ON ot.occupancy_type_id = r.occupancy_type_id
 JOIN rent_band rb ON rb.rent_band_id = r.rent_band_id
-JOIN location_point lp ON lp.point_id = r.point_id
-JOIN neighborhood n ON n.neighborhood_id = lp.neighborhood_id
 WHERE ot.name = 'Occupied by non-owner'
   AND rb.is_no_rent_paid = FALSE
   AND rb.rent_min IS NOT NULL
   AND rb.rent_max IS NOT NULL
-GROUP BY n.neighborhood_id, n.name
-HAVING COUNT(*) >= 100
-ORDER BY avg_band_midpoint DESC, n.name;
+GROUP BY r.submission_year
+ORDER BY r.submission_year;
 
 -- Q6. Most commonly included utilities.
 SELECT u.name AS utility,
@@ -92,12 +89,13 @@ SELECT COUNT(*) AS reversed_history_ranges
 FROM occupancy_history
 WHERE is_reversed = TRUE;
 
--- Q10. Supervisor-district record counts by filing year.
-SELECT r.submission_year,
-       lp.district_id AS supervisor_district,
-       COUNT(*) AS unit_records
-FROM unit_record r
-JOIN location_point lp ON lp.point_id = r.point_id
-WHERE lp.district_id IS NOT NULL
-GROUP BY r.submission_year, lp.district_id
-ORDER BY r.submission_year, lp.district_id;
+-- Q10. Availability of geographic fields in the supplied flat CSV.
+-- Points are populated, but block, neighborhood, and district labels are blank
+-- in this particular file and therefore cannot support geography summaries.
+SELECT submission_year,
+       COUNT(*) AS total_records,
+       SUM(point_id IS NOT NULL) AS records_with_point,
+       SUM(block_num IS NOT NULL) AS records_with_block_label
+FROM unit_record
+GROUP BY submission_year
+ORDER BY submission_year;
