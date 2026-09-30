@@ -192,6 +192,7 @@ def main():
     reports, history, utilities, issues = [], [], [], []
     dimensions = {"bedroom": {}, "bathroom": {}, "sqft": {}, "rent": {}}
     stats = Counter()
+    extract_metadata = None
 
     with open_csv(args.source) as source:
         reader = csv.DictReader(source)
@@ -201,6 +202,15 @@ def main():
                 stats["missing_unique_id"] += 1
                 continue
             stats["rows_in"] += 1
+            row_metadata = (clean_text(row.get("data_as_of")),
+                            clean_text(row.get("data_loaded_at")))
+            if extract_metadata is None:
+                extract_metadata = row_metadata
+            elif row_metadata != extract_metadata:
+                issues.append({"unique_id": unique_id, "column_name": "data_as_of/data_loaded_at",
+                               "issue_code": "inconsistent_extract_metadata",
+                               "raw_value": " | ".join(value or "" for value in row_metadata),
+                               "issue_detail": "metadata differs from the first accepted row"})
             bed, bed_bad = normalize_bedroom(row.get("bedroom_count"))
             bath, bath_shared, bath_bad = normalize_bathroom(row.get("bathroom_count"))
             sqft_min, sqft_max, sqft_open, sqft_status = parse_band(row.get("square_footage"), "sqft")
@@ -239,11 +249,6 @@ def main():
             if raw_past and parse_yes_no(raw_past) is None:
                 issues.append({"unique_id": unique_id, "column_name": "past_occupancy", "issue_code": "unexpected_boolean",
                                "raw_value": raw_past, "issue_detail": "expected Yes/No or Y/N"})
-            for column, raw, parsed in (("occ_history_start", row.get("occ_history_start"), parse_date(row.get("occ_history_start"))),
-                                        ("occ_history_end", row.get("occ_history_end"), parse_date(row.get("occ_history_end")))):
-                if clean_text(raw) and not parsed:
-                    issues.append({"unique_id": unique_id, "column_name": column, "issue_code": "invalid_history_date",
-                                   "raw_value": raw, "issue_detail": "invalid or outside accepted year range"})
             if clean_text(row.get("point")) and not (lon and lat):
                 issues.append({"unique_id": unique_id, "column_name": "point", "issue_code": "invalid_point",
                                "raw_value": row.get("point"), "issue_detail": "expected WKT POINT (longitude latitude)"})
@@ -302,8 +307,8 @@ def main():
     write_csv("occupancy_history_clean.csv", history)
     write_csv("report_utility_clean.csv", utilities)
     write_csv("quality_issue.csv", issues)
-    metadata = [{"data_as_of": clean_text(row.get("data_as_of")),
-                 "data_loaded_at": clean_text(row.get("data_loaded_at"))}]
+    metadata = [{"data_as_of": extract_metadata[0] if extract_metadata else None,
+                 "data_loaded_at": extract_metadata[1] if extract_metadata else None}]
     write_csv("extract_batch.csv", metadata)
     write_csv("bedroom_labels.csv", [{"raw_label": k, "canonical_bedrooms": v[0], "is_unparseable": v[1]} for k, v in dimensions["bedroom"].items()])
     write_csv("bathroom_labels.csv", [{"raw_label": k, "canonical_bathrooms": v[0], "is_shared": v[1], "is_unparseable": v[2]} for k, v in dimensions["bathroom"].items()])

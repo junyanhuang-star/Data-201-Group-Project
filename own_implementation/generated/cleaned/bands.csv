@@ -1,0 +1,53 @@
+band_type,raw_label,min_value,max_value,is_open,status
+sqft,751-1000 Sq.Ft,751,1000,False,reported
+sqft,251-500 Sq.Ft,251,500,False,reported
+sqft,1251-1500 Sq.Ft,1251,1500,False,reported
+sqft,1001-1250 Sq.Ft,1001,1250,False,reported
+sqft,501-750 Sq.Ft,501,750,False,reported
+sqft,Unknown,,,False,unparseable
+sqft,0-250 Sq.Ft,0,250,False,reported
+sqft,1751-2000 Sq.Ft,1751,2000,False,reported
+sqft,1501-1750 Sq.Ft,1501,1750,False,reported
+sqft,2251-2500 Sq.Ft,2251,2500,False,reported
+sqft,2001-2250 Sq.Ft,2001,2250,False,reported
+sqft,2751-3000 Sq.Ft,2751,3000,False,reported
+sqft,2501-2750 Sq.Ft,2501,2750,False,reported
+sqft,4000+ Sq.Ft,4000,,True,reported
+sqft,3001-3250 Sq.Ft,3001,3250,False,reported
+sqft,3251-3500 Sq.Ft,3251,3500,False,reported
+sqft,3501-3750 Sq.Ft,3501,3750,False,reported
+sqft,3751-4000 Sq.Ft,3751,4000,False,reported
+sqft,0-250 Sq.ft,0,250,False,reported
+rent,$3501-$3750,3501,3750,False,reported
+rent,$1251-$1500,1251,1500,False,reported
+rent,$4751-$5000,4751,5000,False,reported
+rent,$3001-$3250,3001,3250,False,reported
+rent,$2001-$2250,2001,2250,False,reported
+rent,$1751-$2000,1751,2000,False,reported
+rent,$3251-$3500,3251,3500,False,reported
+rent,$2751-$3000,2751,3000,False,reported
+rent,$1001-$1250,1001,1250,False,reported
+rent,$751-$1000,751,1000,False,reported
+rent,$3751-$4000,3751,4000,False,reported
+rent,$4501-$4750,4501,4750,False,reported
+rent,$2251-$2500,2251,2500,False,reported
+rent,$2501-$2750,2501,2750,False,reported
+rent,$501-$750,501,750,False,reported
+rent,$1501-$1750,1501,1750,False,reported
+rent,$5001-$5250,5001,5250,False,reported
+rent,$4001-$4250,4001,4250,False,reported
+rent,$5501-$5750,5501,5750,False,reported
+rent,$0 (no rent paid by the occupant),,,False,no_rent_paid
+rent,$7000+,7000,,True,reported
+rent,$6001-$6250,6001,6250,False,reported
+rent,$1-$250,1,250,False,reported
+rent,$6251-$6500,6251,6500,False,reported
+rent,$4251-$4500,4251,4500,False,reported
+rent,$5251-$5500,5251,5500,False,reported
+rent,$6501-$6750,6501,6750,False,reported
+rent,$5751-$6000,5751,6000,False,reported
+rent,$251-$500,251,500,False,reported
+rent,$6751-$7000,6751,7000,False,reported
+rent,0,,,False,no_rent_paid
+rent,$1750-$2000,1750,2000,False,reported
+rent,$250-$500,250,500,False,reported

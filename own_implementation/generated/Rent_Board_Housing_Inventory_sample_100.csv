@@ -1,0 +1,176 @@
+unique_id,block_num,unit_count,case_type_name,submission_year,block_address,occupancy_type,occupancy_or_vacancy_date,occupancy_or_vacancy_date_year,bedroom_count,bathroom_count,square_footage,monthly_rent,base_rent_includes_water_sewer,base_rent_includes_natural_gas,base_rent_includes_electricity,base_rent_includes_refuse_recycling,base_rent_includes_other_utilities,past_occupancy,vacancy_date,signature_date,occupancy_or_vacancy_date_history,year_property_built,point,analysis_neighborhood,supervisor_district,data_as_of,data_loaded_at
+-4703731682178636368,3180,173,Housing Inventory - Unit information (2026),2026,300 Block of BRIGHTON AVE,Occupied by non-owner,2024/03/02,2024,One-Bedroom,One bathroom,751-1000 Sq.Ft,$3501-$3750,N,N,N,N,,No,,2026/02/27,,2012,POINT (-122.455184003 37.719136184),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4647246791381119432,0285,70,Housing Inventory - Unit information (2022),2022,400 Block of STOCKTON ST,Occupied by non-owner,2021/06/12,2021,Studio,One bathroom,251-500 Sq.Ft,$1251-$1500,Y,N,N,Y,heat,No,,2022/07/28,,1911,POINT (-122.408410392 37.796255117),Chinatown,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4473846697338016110,8720,1,Housing Inventory - Unit information (2026),2026,400 Block of MISSION BAY BLVD,Occupied by non-owner,2013/08/03,2013,Two-Bedroom,Two bathrooms,1251-1500 Sq.Ft,$4751-$5000,Y,N,N,N,,,,2025/11/12,,2012,POINT (-122.398554627 37.769625656),Mission Bay,6,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4457013355051929431,0285,70,Housing Inventory - Unit information (2024),2024,400 Block of STOCKTON ST,Occupied by non-owner,2021/04/28,2021,Studio,One bathroom,251-500 Sq.Ft,$1251-$1500,Y,N,N,Y,,No,,2024/01/15,,1911,POINT (-122.408562639 37.797006795),Chinatown,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4426971293237302102,3180,173,Housing Inventory - Unit information (2023),2023,300 Block of BRIGHTON AVE,Occupied by non-owner,2022/06/23,2022,One-Bedroom,One bathroom,751-1000 Sq.Ft,$3001-$3250,N,N,N,N,,Yes,,2023/02/28,"[
+  {
+    ""date_range_type"": ""Occupied"",
+    ""start_date"": ""2022-04-01""
+  }
+]",2012,POINT (-122.455062194 37.722760694),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4419561006219249773,1234,14,Housing Inventory - Unit information (2026),2026,1200 Block of HAIGHT ST,Occupied by non-owner,2026/08/23,2026,Studio,Shared bathroom facilities with other units,251-500 Sq.Ft,$2001-$2250,Y,Y,Y,Y,,,,2026/09/22,,1900,POINT (-122.449942042 37.769679639),Haight Ashbury,5,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4340103387299914790,1234,14,Housing Inventory - Unit information (2024),2024,1200 Block of HAIGHT ST,Occupied by non-owner,2022/11/03,2022,Studio,One bathroom,251-500 Sq.Ft,$1751-$2000,Y,Y,Y,Y,,No,,2024/02/23,,1900,POINT (-122.434564848 37.771638115),Haight Ashbury,5,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4076774950555215180,3180,173,Housing Inventory - Unit information (2024),2024,300 Block of BRIGHTON AVE,Occupied by non-owner,2020/08/29,2020,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$3251-$3500,N,N,N,N,,No,,2024/03/01,,2012,POINT (-122.455200494 37.722760282),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4003422356088595289,0196,14.0,Housing Inventory - Unit information (2023),2023,,Occupied by non-owner,2022/04/15,2022,One-Bedroom,One bathroom,501-750 Sq.Ft,$3001-$3250,N,N,N,Y,,No,,2023/03/29,,,POINT (-122.403991276 37.788796326),Financial District/South Beach,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3909002946913557488,1804,28,Housing Inventory - Unit information (2026),2026,1300 Block of LA PLAYA ST,Occupied by non-owner,2022/06/24,2022,One-Bedroom,One bathroom,501-750 Sq.Ft,$2751-$3000,N,N,N,N,,,,2025/11/26,,1958,POINT (-122.50914512 37.75935381),Sunset/Parkside,4,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3860075460131494022,0145,15.0,Housing Inventory - Unit information (2026),2026,0 Block of ROMOLO ST,Occupied by non-owner,1995/05/01,1995,One-Bedroom,One bathroom,501-750 Sq.Ft,$1251-$1500,Y,N,N,Y,,No,,2026/01/27,,1907,POINT (-122.406332771 37.798739186),North Beach,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3685132144794909753,0285,70,Housing Inventory - Unit information (2023),2023,400 Block of STOCKTON ST,Occupied by non-owner,2020/09/10,2020,Studio,One bathroom,251-500 Sq.Ft,$1001-$1250,Y,N,N,Y,,No,,2023/02/24,,1911,POINT (-122.408234537 37.795373706),Chinatown,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3441925348783985092,0285,72.0,Housing Inventory - Unit information (2026),2026,400 Block of STOCKTON ST,Occupied by non-owner,1993/03/12,1993,Studio,One bathroom,251-500 Sq.Ft,$751-$1000,Y,N,N,Y,,No,,2026/02/10,,1911,POINT (-122.408234537 37.795373706),Chinatown,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3379187474541951418,3180,173,Housing Inventory - Unit information (2026),2026,300 Block of BRIGHTON AVE,Occupied by non-owner,2020/08/15,2020,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$4751-$5000,N,N,N,N,,No,,2026/02/27,,2012,POINT (-122.455200494 37.722760282),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3247303540303568389,0145,14,Housing Inventory - Unit information (2023),2023,0 Block of ROMOLO ST,Occupied by non-owner,1995/05/01,1995,One-Bedroom,One bathroom,501-750 Sq.Ft,$1251-$1500,Y,N,N,Y,,No,,2023/02/27,,1907,POINT (-122.406332771 37.798739186),North Beach,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3179052741049058848,3180,173,Housing Inventory - Unit information (2024),2024,300 Block of BRIGHTON AVE,Occupied by non-owner,2023/02/14,2023,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$3751-$4000,N,N,N,N,,No,,2024/03/01,,2012,POINT (-122.455184003 37.719136184),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3070195719737081621,2616,41,Housing Inventory - Unit information (2024),2024,500 Block of BUENA VISTA AVE,Vacant,,,Studio,One bathroom,501-750 Sq.Ft,,N,N,N,N,,No,,2023/11/29,,1929,POINT (-122.438391369 37.766493452),Castro/Upper Market,8,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2958249400426178286,3180,173,Housing Inventory - Unit information (2024),2024,300 Block of BRIGHTON AVE,Occupied by non-owner,2023/01/24,2023,One-Bedroom,One bathroom,751-1000 Sq.Ft,$3001-$3250,N,N,N,N,,No,,2024/03/01,,2012,POINT (-122.455184003 37.719136184),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2890230166067446497,2616,41,Housing Inventory - Unit information (2023),2023,500 Block of BUENA VISTA AVE,Occupied by non-owner,2013/03/01,2013,One-Bedroom,One bathroom,1001-1250 Sq.Ft,$3501-$3750,N,N,N,N,,No,,2023/01/13,,1929,POINT (-122.438217184 37.768080117),Castro/Upper Market,8,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2876897743416112928,3180,173,Housing Inventory - Unit information (2026),2026,300 Block of BRIGHTON AVE,Occupied by non-owner,2020/08/29,2020,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$4501-$4750,N,N,N,N,,No,,2026/02/27,,2012,POINT (-122.455200494 37.722760282),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2827717655091318289,3180,173,Housing Inventory - Unit information (2025),2025,300 Block of BRIGHTON AVE,Occupied by non-owner,2024/03/30,2024,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$3751-$4000,N,N,N,N,,Yes,,2025/02/23,"[
+  {
+    ""date_range_type"": ""Occupied"",
+    ""end_date"": ""2024-02-23"",
+    ""start_date"": ""2021-10-24""
+  }
+]",2012,POINT (-122.455184003 37.719136184),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2821369502249672568,0581,24,Housing Inventory - Unit information (2022),2022,2200 Block of BROADWAY ST,Occupied by non-owner,2021/01/15,2021,One-Bedroom,One bathroom,751-1000 Sq.Ft,$2251-$2500,Y,N,N,Y,,No,,2022/06/28,,1959,POINT (-122.444006751 37.793065145),Pacific Heights,2,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2797814203585490971,2616,41,Housing Inventory - Unit information (2024),2024,500 Block of BUENA VISTA AVE,Occupied by non-owner,2022/12/01,2022,One-Bedroom,One bathroom,501-750 Sq.Ft,$2751-$3000,N,N,N,N,,No,,2023/11/29,,1929,POINT (-122.438217184 37.768080117),Castro/Upper Market,8,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2720694661172750450,1234,18,Housing Inventory - Unit information (2026),2026,1200 Block of HAIGHT ST,Occupied by non-owner,2008/07/01,2008,Two-Bedroom,One bathroom,1251-1500 Sq.Ft,$2751-$3000,Y,N,N,Y,,No,,2026/02/09,,1906,POINT (-122.452712294 37.769326177),Haight Ashbury,5,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4434681941081554796,0145,19,Housing Inventory - Unit information (2022),2022,0 Block of FRESNO ST,Occupied by owner,,,,,Unknown,,N,N,N,N,,,,2022/07/01,,1906,POINT (-122.406749744 37.79848503),North Beach,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4434578834705287754,0861,8,Housing Inventory - Unit information (2023),2023,200 Block of STEINER ST,Occupied by non-owner,2021/07/16,2021,Two-Bedroom,One bathroom,501-750 Sq.Ft,$3501-$3750,Y,N,N,Y,,No,,2023/02/26,,1963,POINT (-122.432113602 37.771655222),Haight Ashbury,5,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4434360001676106499,3911,156,Housing Inventory - Unit information (2024),2024,0 Block of HENRY ADAMS ST,Occupied by non-owner,2023/08/23,2023,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$4501-$4750,N,N,N,N,,Yes,,2024/02/15,"[
+  {
+    ""date_range_type"": ""Vacant"",
+    ""start_date"": ""2023-08-16""
+  }
+]",2017,POINT (-122.403888909 37.769190148),Mission Bay,6,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4434157479121202894,0524,12,Housing Inventory - Unit information (2025),2025,2500 Block of POLK ST,Occupied by non-owner,2020/12/01,2020,One-Bedroom,One bathroom,751-1000 Sq.Ft,$2501-$2750,Y,N,N,Y,steam heat,No,,2025/02/27,,1922,POINT (-122.422550837 37.800167606),Russian Hill,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4433895829858244292,5857,3.0,Housing Inventory - Unit information (2023),2023,2300 Block of SAN BRUNO AVE,Occupied by owner,,2023,,,Unknown,,N,N,N,N,,,,2022/12/02,,1923,POINT (-122.406425846 37.733729644),Portola,9,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4433822344655517742,3609,10,Housing Inventory - Unit information (2022),2022,900 Block of VALENCIA ST,Occupied by non-owner,,,Studio,One bathroom,501-750 Sq.Ft,$501-$750,Y,N,N,Y,,No,,2022/06/28,,1925,POINT (-122.421086718 37.757305864),Mission,9,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4433475880938114831,3736A,537.0,Housing Inventory - Unit information (2026),2026,500 Block of FOLSOM ST,Occupied by non-owner,2024/10/05,2024,One-Bedroom,One bathroom,751-1000 Sq.Ft,$3501-$3750,N,N,N,N,,No,,2026/03/13,,2019,POINT (-122.394922601 37.787027218),Financial District/South Beach,6,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4433237852314137317,0281,30,Housing Inventory - Unit information (2026),2026,1000 Block of BUSH ST,Occupied by non-owner,2024/10/07,2024,Studio,One bathroom,251-500 Sq.Ft,$1501-$1750,N,N,N,N,,,,2026/01/08,,1922,POINT (-122.414539182 37.789370354),Nob Hill,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4972690824421903492,0285,70,Housing Inventory - Unit information (2024),2024,400 Block of STOCKTON ST,Occupied by non-owner,2022/07/29,2022,Studio,One bathroom,251-500 Sq.Ft,$1501-$1750,Y,N,N,Y,,Yes,,2024/01/15,"[
+  {
+    ""date_range_type"": ""Occupied"",
+    ""end_date"": ""2022-06-30"",
+    ""start_date"": ""2021-06-01""
+  }
+]",1911,POINT (-122.406342054 37.785982379),Financial District/South Beach,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4937131415738615072,0145,15.0,Housing Inventory - Unit information (2026),2026,0 Block of ROMOLO ST,Occupied by non-owner,2024/03/22,2024,Two-Bedroom,One bathroom,501-750 Sq.Ft,$3251-$3500,N,N,N,N,,Yes,,2026/01/27,"[
+  {
+    ""date_range_type"": ""Vacant"",
+    ""end_date"": ""2024-03-21"",
+    ""start_date"": ""2023-09-01""
+  }
+]",1907,POINT (-122.406233728 37.798263576),North Beach,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4599589484064723017,3704,1,Housing Inventory - Unit information (2023),2023,0 Block of MINT PLZ,Occupied by non-owner,2020/10/16,2020,One-Bedroom,One bathroom,751-1000 Sq.Ft,$2501-$2750,N,N,N,Y,,,,2023/01/19,,1926,POINT (-122.407576708 37.783060288),South of Market,6,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4295628044089014927,1084,1.0,Housing Inventory - Unit information (2024),2024,0 Block of STANYAN ST,Occupied by non-owner,2019/11/15,2019,Two-Bedroom,Two bathrooms,1251-1500 Sq.Ft,$5001-$5250,Y,N,N,Y,,,,2024/02/05,,2018,POINT (-122.4552523 37.777308306),Lone Mountain/USF,1,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4293623728036865119,3180,173,Housing Inventory - Unit information (2025),2025,300 Block of BRIGHTON AVE,Occupied by non-owner,2012/08/24,2012,One-Bedroom,One bathroom,751-1000 Sq.Ft,$1001-$1250,Y,Y,N,Y,,No,,2025/02/23,,2012,POINT (-122.455184003 37.719136184),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4183289836271234149,2616,41,Housing Inventory - Unit information (2026),2026,500 Block of BUENA VISTA AVE,Occupied by non-owner,2025/12/01,2025,One-Bedroom,One bathroom,1001-1250 Sq.Ft,$3001-$3250,N,N,N,N,,Yes,,2026/02/23,"[
+  {
+    ""date_range_type"": ""Vacant"",
+    ""end_date"": ""2025-11-30"",
+    ""start_date"": ""2025-01-01""
+  }
+]",1929,POINT (-122.438391369 37.766493452),Castro/Upper Market,8,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4164612675670737887,2616,41,Housing Inventory - Unit information (2023),2023,500 Block of BUENA VISTA AVE,Occupied by non-owner,2010/06/01,2010,Studio,One bathroom,501-750 Sq.Ft,$2251-$2500,N,N,N,N,,No,,2023/01/13,,1929,POINT (-122.438217184 37.768080117),Castro/Upper Market,8,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4009532630625948542,3180,173,Housing Inventory - Unit information (2024),2024,300 Block of BRIGHTON AVE,Occupied by non-owner,2012/07/27,2012,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$1001-$1250,Y,Y,N,Y,,No,,2024/03/01,,2012,POINT (-122.455200494 37.722760282),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3943388234553717478,0285,70,Housing Inventory - Unit information (2023),2023,400 Block of STOCKTON ST,Occupied by non-owner,1993/05/01,1993,Two-Bedroom,One bathroom,501-750 Sq.Ft,$1001-$1250,Y,N,N,Y,,No,,2023/02/24,,1911,POINT (-122.408410392 37.796255117),Chinatown,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3767508497373102229,3180,173,Housing Inventory - Unit information (2025),2025,300 Block of BRIGHTON AVE,Occupied by non-owner,2023/12/01,2023,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$4001-$4250,N,N,N,N,,Yes,,2025/02/23,"[
+  {
+    ""date_range_type"": ""Occupied"",
+    ""end_date"": ""2023-11-10"",
+    ""start_date"": ""2020-09-05""
+  }
+]",2012,POINT (-122.455200494 37.722760282),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3743385871424520354,0285,70,Housing Inventory - Unit information (2022),2022,400 Block of STOCKTON ST,Occupied by non-owner,2020/08/16,2020,Studio,One bathroom,251-500 Sq.Ft,$1501-$1750,Y,N,N,Y,heat,No,,2022/07/28,,1911,POINT (-122.407329104 37.790987195),Nob Hill,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3685783585600334606,7331,1,Housing Inventory - Unit information (2024),2024,200 Block of SUMMIT WAY,Occupied by owner,,,,,Unknown,,N,N,N,N,,,,2023/11/06,,2016,POINT (-122.476338616 37.714950117),Lakeshore,7,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3647845286972851568,3180,173,Housing Inventory - Unit information (2024),2024,300 Block of BRIGHTON AVE,Occupied by non-owner,2022/11/04,2022,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$3501-$3750,N,N,N,N,,No,,2024/03/01,,2012,POINT (-122.455200494 37.722760282),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3552478760684049516,0285,70,Housing Inventory - Unit information (2023),2023,400 Block of STOCKTON ST,Occupied by non-owner,2021/04/01,2021,Two-Bedroom,One bathroom,501-750 Sq.Ft,$2251-$2500,Y,N,N,Y,,No,,2023/02/24,,1911,POINT (-122.408410392 37.796255117),Chinatown,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3490148671756974084,1234,14,Housing Inventory - Unit information (2023),2023,1200 Block of HAIGHT ST,Occupied by non-owner,2020/12/01,2020,Studio,One bathroom,0-250 Sq.Ft,$1501-$1750,Y,Y,Y,Y,,No,,2023/03/06,,1900,POINT (-122.431274062 37.772057),Hayes Valley,5,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3270551434283916519,0145,15.0,Housing Inventory - Unit information (2026),2026,0 Block of ROMOLO ST,Occupied by non-owner,2002/09/07,2002,Two-Bedroom,One bathroom,751-1000 Sq.Ft,$2251-$2500,Y,N,N,Y,,No,,2026/01/27,,1907,POINT (-122.406332771 37.798739186),North Beach,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3266973851147238744,3180,173,Housing Inventory - Unit information (2023),2023,300 Block of BRIGHTON AVE,Occupied by non-owner,2012/07/21,2012,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$1001-$1250,Y,Y,N,Y,,No,,2023/02/28,,2012,POINT (-122.455200494 37.722760282),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3132877503076979067,1234,14,Housing Inventory - Unit information (2024),2024,1200 Block of HAIGHT ST,Occupied by non-owner,2021/01/15,2021,Studio,Shared bathroom facilities with other units,0-250 Sq.Ft,$1251-$1500,Y,Y,Y,Y,,No,,2024/02/23,,1900,POINT (-122.442665736 37.770607816),Haight Ashbury,5,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3056810986919801500,2616,41,Housing Inventory - Unit information (2024),2024,500 Block of BUENA VISTA AVE,Occupied by non-owner,2021/11/09,2021,One-Bedroom,One bathroom,501-750 Sq.Ft,$3501-$3750,N,N,N,N,,No,,2023/11/29,,1929,POINT (-122.438217184 37.768080117),Castro/Upper Market,8,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2905488872379675832,2616,41,Housing Inventory - Unit information (2023),2023,500 Block of BUENA VISTA AVE,Occupied by non-owner,1986/12/01,1986,Studio,One bathroom,501-750 Sq.Ft,$501-$750,N,N,N,N,,No,,2023/01/13,,1929,POINT (-122.438391369 37.766493452),Castro/Upper Market,8,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2903168721855671420,1234,14,Housing Inventory - Unit information (2022),2022,1200 Block of HAIGHT ST,Occupied by non-owner,2022/06/22,2022,Studio,One bathroom,251-500 Sq.Ft,$1501-$1750,Y,Y,Y,Y,,Yes,,2022/06/24,"[
+  {
+    ""date_range_type"": ""Vacant"",
+    ""end_date"": ""2022-06-21"",
+    ""start_date"": ""2022-05-10""
+  }
+]",1900,POINT (-122.450474554 37.769611726),Haight Ashbury,5,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2809880686144326034,3180,173,Housing Inventory - Unit information (2025),2025,300 Block of BRIGHTON AVE,Occupied by non-owner,2021/10/15,2021,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$3251-$3500,N,N,N,N,,No,,2025/02/23,,2012,POINT (-122.455200494 37.722760282),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2726516931756780476,7381,1.0,Housing Inventory - Unit information (2024),2024,200 Block of N LAKE MERCED HLS,Occupied by non-owner,2022/07/08,2022,Three-Bedroom,Two and a half bathrooms,1751-2000 Sq.Ft,$5501-$5750,N,N,N,N,,No,,2024/01/22,,1975,POINT (-122.485266252 37.716523518),Lakeshore,7,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2686673666588913016,2616,41,Housing Inventory - Unit information (2023),2023,500 Block of BUENA VISTA AVE,Occupied by non-owner,2021/11/13,2021,Three-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$4751-$5000,N,N,N,N,,No,,2023/01/13,,1929,POINT (-122.438217184 37.768080117),Castro/Upper Market,8,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4434680625923587748,3557,6,Housing Inventory - Unit information (2023),2023,100 Block of LANDERS ST,Occupied by non-owner,,2023,Two-Bedroom,One bathroom,501-750 Sq.Ft,$1501-$1750,Y,N,N,Y,,No,,2023/02/11,,1965,POINT (-122.42772252 37.765099987),Castro/Upper Market,8,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4434587645554777327,0321,33,Housing Inventory - Unit information (2024),2024,700 Block of OFARRELL ST,Occupied by non-owner,2002/11/01,2002,Studio,One bathroom,251-500 Sq.Ft,$1001-$1250,N,N,N,N,,No,,2024/02/23,,1922,POINT (-122.41706961 37.785217363),Tenderloin,5,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4434249522957904052,4153,4,Housing Inventory - Unit information (2025),2025,1000 Block of HAMPSHIRE ST,Occupied by non-owner,2021/09/09,2021,One-Bedroom,One bathroom,501-750 Sq.Ft,$2251-$2500,N,N,N,N,,No,,2025/04/17,,1937,POINT (-122.407456231 37.755311721),Mission,9,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4433942842452141587,3736A,537.0,Housing Inventory - Unit information (2025),2025,500 Block of FOLSOM ST,Occupied by non-owner,2024/04/13,2024,Studio,One bathroom,251-500 Sq.Ft,$2501-$2750,N,N,N,N,,No,,2025/02/28,,2019,POINT (-122.394922601 37.787027218),Financial District/South Beach,6,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4433652113960048275,0251,25.0,Housing Inventory - Unit information (2026),2026,1200 Block of PINE ST,Vacant,,,Studio,One bathroom,0-250 Sq.Ft,$0 (no rent paid by the occupant),N,N,N,N,,No,2025/04/12,2026/02/25,,1927,POINT (-122.416392889 37.790203959),Nob Hill,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4433465054853307435,1143,4,Housing Inventory - Unit information (2025),2025,2700 Block of GOLDEN GATE AVE,Occupied by non-owner,2010/02/01,2010,One-Bedroom,One bathroom,501-750 Sq.Ft,$1501-$1750,Y,Y,Y,Y,,,,2025/01/23,,1900,POINT (-122.455945573 37.776979909),Lone Mountain/USF,1,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4433335170923105958,1226,4,Housing Inventory - Unit information (2025),2025,1800 Block of PAGE ST,Occupied by non-owner,2016/08/01,2016,One-Bedroom,One bathroom,501-750 Sq.Ft,$3001-$3250,N,N,N,N,,,,2025/03/04,,1908,POINT (-122.451242158 37.770470293),Haight Ashbury,5,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4433132139593355822,3608,14,Housing Inventory - Unit information (2022),2022,800 Block of GUERRERO ST,Occupied by non-owner,2005/10/31,2005,Two-Bedroom,One bathroom,1001-1250 Sq.Ft,$2251-$2500,Y,N,N,Y,,No,,2022/06/28,,1925,POINT (-122.423259252 37.757165651),Mission,9,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4816884108157899781,0145,14,Housing Inventory - Unit information (2023),2023,0 Block of ROMOLO ST,Occupied by non-owner,1979/06/01,1979,Three-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$1501-$1750,Y,N,N,Y,,No,,2023/02/27,,1907,POINT (-122.406233728 37.798263576),North Beach,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4654564482571947570,0285,70,Housing Inventory - Unit information (2022),2022,400 Block of STOCKTON ST,Occupied by non-owner,2020/11/03,2020,Studio,One bathroom,501-750 Sq.Ft,$1001-$1250,Y,N,N,Y,heat,No,,2022/07/28,,1911,POINT (-122.408928384 37.798793964),Chinatown,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4603512479828523145,7331,1,Housing Inventory - Unit information (2024),2024,100 Block of SUMMIT WAY,Occupied by non-owner,2019/03/27,2019,Three-Bedroom,Two and a half bathrooms,1501-1750 Sq.Ft,$3751-$4000,N,N,N,N,,,,2024/04/27,,2015,POINT (-122.476338616 37.714950117),Lakeshore,7,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4568518449398698182,1804,28,Housing Inventory - Unit information (2023),2023,1300 Block of LA PLAYA ST,Occupied by non-owner,2022/01/06,2022,One-Bedroom,One bathroom,501-750 Sq.Ft,$2751-$3000,N,N,N,N,,,,2023/10/13,,1958,POINT (-122.509404715 37.763084762),Sunset/Parkside,4,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4497852622283079627,3180,173,Housing Inventory - Unit information (2024),2024,300 Block of BRIGHTON AVE,Occupied by non-owner,2020/08/15,2020,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$3501-$3750,N,N,N,N,,No,,2024/03/01,,2012,POINT (-122.455184003 37.719136184),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4410706459591018312,0196,14.0,Housing Inventory - Unit information (2024),2024,,Occupied by non-owner,2021/05/28,2021,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$3751-$4000,N,N,N,Y,,No,,2024/05/23,,,POINT (-122.397440475 37.780826106),South of Market,6,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4314281966878376592,8720,1,Housing Inventory - Unit information (2023),2023,400 Block of MISSION BAY BLVD,Occupied by non-owner,2022/07/08,2022,One-Bedroom,One bathroom,751-1000 Sq.Ft,$4001-$4250,Y,N,N,Y,,Yes,,2023/02/27,"[
+  {
+    ""date_range_type"": ""Occupied"",
+    ""end_date"": ""2022-04-01"",
+    ""start_date"": ""2020-02-01""
+  }
+]",2012,POINT (-122.398554627 37.769625656),Mission Bay,6,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4105088854470950195,0196,14.0,Housing Inventory - Unit information (2024),2024,,Occupied by non-owner,2021/09/17,2021,Studio,One bathroom,251-500 Sq.Ft,$2501-$2750,N,N,N,Y,,No,,2024/05/23,,,POINT (-122.413326362 37.783692487),Tenderloin,5,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4032706150502801283,7381,0,Housing Inventory - Unit information (2023),2023,200 Block of N LAKE MERCED HLS,Occupied by non-owner,2021/12/19,2021,Four-Bedroom,Three bathrooms or more,2251-2500 Sq.Ft,$7000+,N,N,N,N,,No,,2023/02/17,,1975,POINT (-122.485235723 37.708630982),Lakeshore,7,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3787945642380863712,1234,18,Housing Inventory - Unit information (2025),2025,1200 Block of HAIGHT ST,Occupied by non-owner,2014/08/01,2014,Two-Bedroom,One bathroom,1251-1500 Sq.Ft,$2751-$3000,Y,N,N,Y,,No,,2025/02/19,,1906,POINT (-122.451298931 37.769506587),Haight Ashbury,5,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3777067750683434795,4591C,1,Housing Inventory - Unit information (2024),2024,400 Block of DONAHUE ST,Occupied by non-owner,2024/02/07,2024,One-Bedroom,One bathroom,501-750 Sq.Ft,$2751-$3000,Y,Y,N,Y,,,,2024/09/24,,2016,POINT (-122.370476871 37.728345599),Bayview Hunters Point,10,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3732626779268447587,0145,14,Housing Inventory - Unit information (2024),2024,0 Block of ROMOLO ST,Occupied by non-owner,2023/10/08,2023,Two-Bedroom,One bathroom,501-750 Sq.Ft,$3251-$3500,N,N,N,N,,Yes,,2024/02/18,"[
+  {
+    ""date_range_type"": ""Vacant"",
+    ""end_date"": ""2023-10-07"",
+    ""start_date"": ""2021-11-03""
+  }
+]",1907,POINT (-122.406332771 37.798739186),North Beach,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3694689223250387939,2616,41,Housing Inventory - Unit information (2025),2025,500 Block of BUENA VISTA AVE,Occupied by non-owner,2002/08/01,2002,One-Bedroom,One bathroom,1001-1250 Sq.Ft,$2751-$3000,N,N,N,N,,No,,2025/02/27,,1929,POINT (-122.438217184 37.768080117),Castro/Upper Market,8,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3670869415681847738,7331,1,Housing Inventory - Unit information (2024),2024,0 Block of SUMMIT WAY,Occupied by owner,,,,,Unknown,,N,N,N,N,,,,2023/12/27,,2015,POINT (-122.476338616 37.714950117),Lakeshore,7,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3619952163315933680,8720,1,Housing Inventory - Unit information (2025),2025,400 Block of MISSION BAY BLVD,Occupied by non-owner,2025/04/01,2025,Two-Bedroom,Two bathrooms,1251-1500 Sq.Ft,$6001-$6250,Y,N,N,Y,,No,,2025/04/30,,2012,POINT (-122.398554627 37.769625656),Mission Bay,6,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3427885846288190227,4591C,1,Housing Inventory - Unit information (2026),2026,500 Block of DONAHUE ST,Occupied by owner,,,,,Unknown,,N,N,N,N,,,,2026/04/21,,2016,POINT (-122.370476871 37.728345599),Bayview Hunters Point,10,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3270336762932843135,3180,173,Housing Inventory - Unit information (2026),2026,300 Block of BRIGHTON AVE,Occupied by non-owner,2022/12/23,2022,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$4501-$4750,N,N,N,N,,No,,2026/02/27,,2012,POINT (-122.455184003 37.719136184),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3028987599837414233,0285,70,Housing Inventory - Unit information (2025),2025,400 Block of STOCKTON ST,Occupied by non-owner,2007/04/01,2007,Studio,One bathroom,251-500 Sq.Ft,$1001-$1250,Y,N,N,Y,,No,,2025/02/21,,1911,POINT (-122.408928384 37.798793964),Chinatown,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-3002374272333276884,5476,4,Housing Inventory - Unit information (2024),2024,1800 Block of BAY SHORE BLVD,Occupied by non-owner,2019/03/31,2019,Two-Bedroom,One bathroom,751-1000 Sq.Ft,$2501-$2750,Y,N,N,Y,,,,2024/02/09,,1964,POINT (-122.403074535 37.711670115),Bayview Hunters Point,10,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2970547860718447311,0145,14,Housing Inventory - Unit information (2024),2024,0 Block of ROMOLO ST,Occupied by non-owner,2003/02/15,2003,One-Bedroom,One bathroom,501-750 Sq.Ft,$1251-$1500,Y,N,N,Y,,No,,2024/02/18,,1907,POINT (-122.406332771 37.798739186),North Beach,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2945618696558686229,7331,1,Housing Inventory - Unit information (2024),2024,100 Block of SUMMIT WAY,Occupied by owner,,,,,Unknown,,N,N,N,N,,,,2024/04/27,,2015,POINT (-122.476338616 37.714950117),Lakeshore,7,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2833308094550097669,3180,173,Housing Inventory - Unit information (2024),2024,300 Block of BRIGHTON AVE,Occupied by non-owner,2023/01/13,2023,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$3501-$3750,N,N,N,N,,No,,2024/03/01,,2012,POINT (-122.455184003 37.719136184),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-2681217775347369556,0285,70,Housing Inventory - Unit information (2022),2022,400 Block of STOCKTON ST,Occupied by non-owner,2008/02/01,2008,Two-Bedroom,One bathroom,501-750 Sq.Ft,$1751-$2000,Y,N,N,Y,heat,No,,2022/07/28,,1911,POINT (-122.408410392 37.796255117),Chinatown,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4434538368633562811,0345,232,Housing Inventory - Unit information (2024),2024,300 Block of TURK ST,Occupied by non-owner,,,Studio,One bathroom,0-250 Sq.Ft,$1251-$1500,Y,N,Y,Y,heat,No,,2024/03/01,,1928,POINT (-122.414862827 37.782635513),Tenderloin,5,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4434064070611932865,3911,156,Housing Inventory - Unit information (2024),2024,0 Block of HENRY ADAMS ST,Occupied by non-owner,2023/12/30,2023,One-Bedroom,One bathroom,501-750 Sq.Ft,$2751-$3000,N,N,N,N,,Yes,,2024/02/15,"[
+  {
+    ""date_range_type"": ""Vacant"",
+    ""start_date"": ""2023-12-12""
+  }
+]",2017,POINT (-122.403888909 37.769190148),Mission Bay,6,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4433992427041151487,0814,418.0,Housing Inventory - Unit information (2022),2022,100 Block of VAN NESS AVE,Occupied by non-owner,2021/01/10,2021,Two-Bedroom,Two bathrooms,751-1000 Sq.Ft,$3751-$4000,N,N,N,N,,Yes,,2022/07/01,,2015,POINT (-122.419454933 37.776852076),Tenderloin,6,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4433353261566286354,0912,1,Housing Inventory - Unit information (2026),2026,3800 Block of SCOTT ST,Occupied by non-owner,2021/05/20,2021,One-Bedroom,One bathroom,501-750 Sq.Ft,$3501-$3750,Y,N,N,N,,No,,2026/03/02,,1928,POINT (-122.442289388 37.805319345),Marina,2,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4960250685349134433,4644,4,Housing Inventory - Unit information (2024),2024,700 Block of EARL ST,Occupied by non-owner,2018/10/18,2018,Two-Bedroom,Two bathrooms,751-1000 Sq.Ft,$3251-$3500,Y,N,N,Y,,,,2024/03/29,,1947,POINT (-122.373398083 37.728278905),Bayview Hunters Point,10,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4649368969776314776,0285,70,Housing Inventory - Unit information (2023),2023,400 Block of STOCKTON ST,Occupied by non-owner,2021/11/01,2021,Studio,One bathroom,251-500 Sq.Ft,$1251-$1500,Y,N,N,Y,,No,,2023/02/24,,1911,POINT (-122.408928384 37.798793964),Chinatown,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4614387529413923282,3180,173,Housing Inventory - Unit information (2024),2024,300 Block of BRIGHTON AVE,Occupied by non-owner,2014/09/27,2014,One-Bedroom,One bathroom,751-1000 Sq.Ft,$1251-$1500,Y,Y,N,Y,,No,,2024/03/01,,2012,POINT (-122.455184003 37.719136184),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4566659994532719156,3180,173,Housing Inventory - Unit information (2023),2023,300 Block of BRIGHTON AVE,Occupied by non-owner,2022/10/15,2022,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$3501-$3750,N,N,N,N,,Yes,,2023/02/28,"[
+  {
+    ""date_range_type"": ""Occupied"",
+    ""end_date"": ""2022-10-06"",
+    ""start_date"": ""2020-09-05""
+  }
+]",2012,POINT (-122.455184003 37.719136184),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4291750955326937300,8720,1,Housing Inventory - Unit information (2025),2025,400 Block of MISSION BAY BLVD,Occupied by non-owner,2023/03/17,2023,One-Bedroom,One and a half bathrooms,1001-1250 Sq.Ft,$4501-$4750,Y,N,N,Y,,No,,2025/03/12,,2012,POINT (-122.397353761 37.770178821),Mission Bay,6,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4248970404573904686,3180,173,Housing Inventory - Unit information (2022),2022,300 Block of BRIGHTON AVE,Occupied by non-owner,2021/04/29,2021,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$3251-$3500,N,N,N,N,,No,,2022/06/30,,2012,POINT (-122.455184003 37.719136184),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4122489733265579883,0285,72.0,Housing Inventory - Unit information (2026),2026,400 Block of STOCKTON ST,Occupied by non-owner,2022/12/01,2022,Two-Bedroom,One bathroom,501-750 Sq.Ft,$2251-$2500,Y,N,N,Y,,Yes,,2026/02/10,"[
+  {
+    ""date_range_type"": ""Occupied"",
+    ""end_date"": ""2022-09-06"",
+    ""start_date"": ""2021-09-03""
+  }
+]",1911,POINT (-122.408562639 37.797006795),Chinatown,3,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4113802835905655447,1639,0.0,Housing Inventory - Unit information (2024),2024,,Occupied by owner,,,,,Unknown,,N,N,N,N,,,,2024/02/28,,,POINT (-122.466563874 37.781883928),Inner Richmond,1,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM
+-4089526336496844329,3180,173,Housing Inventory - Unit information (2025),2025,300 Block of BRIGHTON AVE,Occupied by non-owner,2021/10/16,2021,Two-Bedroom,Two bathrooms,1001-1250 Sq.Ft,$3501-$3750,N,N,N,N,,No,,2025/02/23,,2012,POINT (-122.455184003 37.719136184),Oceanview/Merced/Ingleside,11,2026/09/27 01:31:09 AM,2026/09/27 06:15:32 AM

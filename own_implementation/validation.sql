@@ -39,3 +39,29 @@ JOIN OccupancyType o USING (occupancy_type_id)
 LEFT JOIN RentBand rb USING (rent_band_id)
 GROUP BY f.submission_year, o.name
 ORDER BY f.submission_year, o.name;
+
+-- ============================================================================
+-- Sample inspection queries
+--
+-- These queries are intended for the committed 100-row discussion sample.
+-- SELECT * is useful here because the purpose is to view how each relation is
+-- populated. LIMIT 100 keeps the same inspection script practical if it is
+-- later run after loading the full CSV.
+-- ============================================================================
+SELECT * FROM ExtractBatch LIMIT 100;
+SELECT * FROM FilingCycle LIMIT 100;
+SELECT * FROM Neighborhood LIMIT 100;
+SELECT * FROM SupervisorDistrict LIMIT 100;
+SELECT * FROM LocationPoint LIMIT 100;
+SELECT * FROM AssessorBlock LIMIT 100;
+SELECT * FROM BlockAddress LIMIT 100;
+SELECT * FROM OccupancyType LIMIT 100;
+SELECT * FROM BedroomLabel LIMIT 100;
+SELECT * FROM BathroomLabel LIMIT 100;
+SELECT * FROM SquareFootageBand LIMIT 100;
+SELECT * FROM RentBand LIMIT 100;
+SELECT * FROM UnitReport LIMIT 100;
+SELECT * FROM Utility LIMIT 100;
+SELECT * FROM ReportUtility LIMIT 100;
+SELECT * FROM OccupancyHistory LIMIT 100;
+SELECT * FROM QualityIssue LIMIT 100;

@@ -1,0 +1,7 @@
+bathroom_label_id	raw_label	canonical_bathrooms	is_shared	is_unparseable
+"1"	"One and a half bathrooms"	"1.5"	"0"	"0"
+"2"	"One bathroom"	"1.0"	"0"	"0"
+"3"	"Shared bathroom facilities with other units"	\N	"1"	"0"
+"4"	"Three bathrooms or more"	"3.0"	"0"	"0"
+"5"	"Two and a half bathrooms"	"2.5"	"0"	"0"
+"6"	"Two bathrooms"	"2.0"	"0"	"0"

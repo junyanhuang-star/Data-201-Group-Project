@@ -1,0 +1,46 @@
+raw_label,canonical_bedrooms,is_unparseable
+One-Bedroom,1,False
+Studio,0,False
+Two-Bedroom,2,False
+Three-Bedroom,3,False
+Four-Bedroom,4,False
+5+,5,False
+1 bedroom,1,False
+1,1,False
+0,0,False
+2,2,False
+2S,,True
+1 Bedroom,1,False
+One Bedroom,1,False
+3,3,False
+One-bedroom,1,False
+Two Bedroom,2,False
+1br,1,False
+studio,0,False
+Zero-(Studio),0,False
+3 bedroom,3,False
+2T,,True
+2A,,True
+1bedroom,1,False
+2 bedroom,2,False
+1T,,True
+3bedroom,3,False
+Studio (sm),0,False
+1A,,True
+2br,2,False
+Garage,,True
+2brd,2,False
+Two-bedroom,2,False
+1U,,True
+2U,,True
+Zero -(Studio),0,False
+Vacant,,True
+$D$61,,True
+2 bedroomq,2,False
+Five-Bedroom,5,False
+0U,,True
+0A,,True
+1 bed,1,False
+2AH,,True
+0AH,,True
+2 bedriin,2,False

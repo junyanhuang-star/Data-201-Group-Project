@@ -1,0 +1,6 @@
+raw_label,canonical_bedrooms,is_unparseable
+One-Bedroom,1,False
+Studio,0,False
+Two-Bedroom,2,False
+Three-Bedroom,3,False
+Four-Bedroom,4,False

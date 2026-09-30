@@ -1,0 +1,32 @@
+raw_label,canonical_bathrooms,is_shared,is_unparseable
+One bathroom,1.0,False,False
+Two bathrooms,2.0,False,False
+Shared bathroom facilities with other units,,True,False
+Two and a half bathrooms,2.5,False,False
+Three bathrooms or more,3.0,False,False
+One and a half bathrooms,1.5,False,False
+1 bathroom,1.0,False,False
+1,1.0,False,False
+One Bathroom,1.0,False,False
+One-Bathroom,1.0,False,False
+2,2.0,False,False
+1.00,1.0,False,False
+2.5,2.5,False,False
+0,0.0,False,False
+None,0.0,False,False
+Two bathroom,2.0,False,False
+2 bathroom,2.0,False,False
+shared bathroom facilities with other units,,True,False
+1bathroom,,False,True
+One-Bedroom,,False,True
+2.00,2.0,False,False
+2  bathroom,,False,True
+Two-Bathroom,2.0,False,False
+2 bedroom,,False,True
+1 bedroom,,False,True
+2 batroom,,False,True
+One and a half bathdrooms,1.5,False,False
+Two Bathroom,2.0,False,False
+3.5,3.5,False,False
+One and a Half Bathrooms,1.5,False,False
+E3,,False,True

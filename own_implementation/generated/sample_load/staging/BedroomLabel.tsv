@@ -1,0 +1,6 @@
+bedroom_label_id	raw_label	canonical_bedrooms	is_unparseable
+"1"	"Four-Bedroom"	"4"	"0"
+"2"	"One-Bedroom"	"1"	"0"
+"3"	"Studio"	"0"	"0"
+"4"	"Three-Bedroom"	"3"	"0"
+"5"	"Two-Bedroom"	"2"	"0"
