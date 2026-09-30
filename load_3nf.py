@@ -77,11 +77,14 @@ def duplicate_hash(row: dict[str, str], fields: list[str]) -> str:
     return hashlib.md5(content.encode("utf-8")).hexdigest()
 
 
-def make_load_statement(table: str, columns: list[str], path: Path) -> str:
-    try:
-        infile = path.resolve().relative_to(ROOT).as_posix()
-    except ValueError:
+def make_load_statement(table: str, columns: list[str], path: Path, absolute_paths: bool = False) -> str:
+    if absolute_paths:
         infile = str(path.resolve()).replace("\\", "\\\\")
+    else:
+        try:
+            infile = path.resolve().relative_to(ROOT).as_posix()
+        except ValueError:
+            infile = str(path.resolve()).replace("\\", "\\\\")
     infile = infile.replace("'", "\\'")
     return (
         f"LOAD DATA LOCAL INFILE '{infile}' INTO TABLE `{table}`\n"
@@ -95,6 +98,8 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--csv", type=Path, default=ROOT / "Rent_Board_Housing_Inventory_flat_final.csv")
     parser.add_argument("--out", type=Path, default=ROOT / "load")
+    parser.add_argument("--sql-out", type=Path, default=ROOT / "load_3nf.sql")
+    parser.add_argument("--absolute-paths", action="store_true", help="Use full local paths for MySQL Workbench")
     args = parser.parse_args()
     csv_path = args.csv.resolve()
     out = args.out.resolve()
@@ -247,11 +252,11 @@ def main() -> None:
         write_tsv(path, columns, rows)
         staged.append((table, columns, path))
 
-    sql_path = ROOT / "load_3nf.sql"
+    sql_path = args.sql_out.resolve()
     with sql_path.open("w", encoding="utf-8") as sql:
         sql.write("USE RentBoardDB;\nSET FOREIGN_KEY_CHECKS = 0;\n")
         for table, columns, path in staged:
-            sql.write(make_load_statement(table, columns, path))
+            sql.write(make_load_statement(table, columns, path, args.absolute_paths))
         sql.write("SET FOREIGN_KEY_CHECKS = 1;\n")
         sql.write("SELECT 'staging complete' AS status, COUNT(*) AS unit_records FROM unit_record;\n")
     print(f"staged {len(unit_out):,} unit records")

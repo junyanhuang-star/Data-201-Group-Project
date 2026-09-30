@@ -1,5 +1,5 @@
 __pycache__/
 .venv/
 load/
+load_3nf_workbench.sql
 *.pyc
-
