@@ -1,116 +1,172 @@
-# 100-Row Sample Pipeline Run
+# Reproducible Rent Board Pipeline
 
-This document records the commands and results used to create and load the
-small discussion sample. It is a reproducible reference for the team, not a
-replacement for rerunning the workflow against the full CSV.
+This document explains how to run the preprocessing and loading workflow with
+the CSV version selected by the team. The commands use variables so that a
+teammate can change the source filename without rewriting every command.
 
-## Source and sample size
+The generated files are local outputs. They do not need to be committed to the
+repository because the Python scripts recreate them.
 
-The source was:
+## 1. Set the source CSV and output folders
 
-```text
-/Users/aduques/Downloads/Rent_Board_Housing_Inventory_20260927.csv
-```
-
-From the repository root, the first 100 data rows were copied with Python's
-CSV parser so quoted fields and embedded commas remained valid:
+Run these commands from the repository root. Replace only `CSV_PATH` with the
+absolute path to the exact CSV snapshot agreed on by the team. All teammates
+should use the same CSV file version for comparable results.
 
 ```bash
-cd "/Users/aduques/DATA 201/Data-201-Group-Project"
+# CHANGE THIS: replace the path with your own local project-directory path.
+cd "/absolute/path/to/Data-201-Group-Project"
 
-python3 -c 'import csv; src="/Users/aduques/Downloads/Rent_Board_Housing_Inventory_20260927.csv"; dst="own_implementation/generated/Rent_Board_Housing_Inventory_sample_100.csv"; csv.field_size_limit(10**9); f=open(src,encoding="utf-8-sig",newline=""); out=open(dst,"w",encoding="utf-8",newline=""); reader=csv.reader(f); writer=csv.writer(out); writer.writerow(next(reader)); [writer.writerow(row) for _,row in zip(range(100),reader)]; out.close(); f.close()'
+# CHANGE THIS: replace with the path to the exact team CSV on your computer.
+CSV_PATH="/absolute/path/to/Rent_Board_Housing_Inventory.csv"
+
+# KEEP THESE PATHS AS WRITTEN. SAMPLE_CSV is created by the next step.
+SAMPLE_CSV="own_implementation/generated/Rent_Board_Housing_Inventory_sample_100.csv"
+SAMPLE_CLEANED_DIR="own_implementation/generated/sample_cleaned"
+SAMPLE_LOAD_DIR="own_implementation/generated/sample_load"
+FULL_CLEANED_DIR="own_implementation/generated/cleaned"
+FULL_LOAD_DIR="own_implementation/generated/load"
 ```
 
-The sample size was checked with:
+The repository path above is only an example. If the repository is located
+elsewhere, change the `cd` path. The `CSV_PATH` value must point to the local
+copy of the team CSV; it is not a URL. `SAMPLE_CSV` is not an input file that
+the team needs to download: the sample-extraction step creates it from
+`CSV_PATH`.
+
+## 2. Optional: create a 100-row discussion sample
+
+This copies the header and first 100 data rows while preserving quoted fields
+and embedded commas. It does not modify the original CSV.
 
 ```bash
-python3 -c 'import csv; p="own_implementation/generated/Rent_Board_Housing_Inventory_sample_100.csv"; f=open(p,encoding="utf-8-sig",newline=""); print(sum(1 for _ in csv.DictReader(f))); f.close()'
+mkdir -p "$(dirname "$SAMPLE_CSV")"
+
+python3 - "$CSV_PATH" "$SAMPLE_CSV" <<'PY'
+import csv
+import sys
+
+source_path, sample_path = sys.argv[1:]
+csv.field_size_limit(10**9)
+
+with open(source_path, encoding="utf-8-sig", newline="") as source, \
+     open(sample_path, "w", encoding="utf-8", newline="") as output:
+    reader = csv.reader(source)
+    writer = csv.writer(output)
+    writer.writerow(next(reader))
+    for number, row in zip(range(100), reader):
+        writer.writerow(row)
+PY
 ```
 
-Output:
+Check the sample size:
+
+```bash
+python3 - "$SAMPLE_CSV" <<'PY'
+import csv
+import sys
+
+with open(sys.argv[1], encoding="utf-8-sig", newline="") as source:
+    print(sum(1 for _ in csv.DictReader(source)))
+PY
+```
+
+Expected output:
 
 ```text
 100
 ```
 
-For this sample specifically, the source contains 99 blank `vacancy_date`
-values and 1 populated `vacancy_date` value. Missing dates should appear as
-SQL `NULL` in `UnitReport`, not as `0000-00-00`.
+The sample is for discussion and debugging only. Its counts and values may
+differ from a later team CSV snapshot.
 
-## Python preprocessing output
+## 3. Run Python preprocessing
+
+To inspect cleaned outputs for the 100-row sample:
 
 ```bash
 python3 own_implementation/clean_inventory.py \
-  --source own_implementation/generated/Rent_Board_Housing_Inventory_sample_100.csv \
-  --output-dir own_implementation/generated/sample_cleaned
+  --source "$SAMPLE_CSV" \
+  --output-dir "$SAMPLE_CLEANED_DIR"
 ```
 
-Output:
+To preprocess the complete team CSV:
 
-```text
-{'rows_in': 100, 'rows_out': 100, 'history_rows': 13, 'utility_rows': 118, 'quality_issues': 0, 'output_dir': 'own_implementation/generated/sample_cleaned'}
+```bash
+python3 own_implementation/clean_inventory.py \
+  --source "$CSV_PATH" \
+  --output-dir "$FULL_CLEANED_DIR"
 ```
 
-The cleaned CSV files are in `own_implementation/generated/sample_cleaned/`.
+The script creates the selected output directory if it does not exist. It
+writes table-shaped cleaned files, including labels, utility rows, occupancy
+history, and quality issues. This step is independent from the loader; the
+loader parses the source CSV itself.
 
-## Loader output
+## 4. Generate the MySQL loader files
+
+For the 100-row sample:
 
 ```bash
 python3 own_implementation/load_3nf.py \
-  --source own_implementation/generated/Rent_Board_Housing_Inventory_sample_100.csv \
-  --output-dir own_implementation/generated/sample_load
+  --source "$SAMPLE_CSV" \
+  --output-dir "$SAMPLE_LOAD_DIR"
 ```
 
-Output:
+For the complete team CSV:
+
+```bash
+python3 own_implementation/load_3nf.py \
+  --source "$CSV_PATH" \
+  --output-dir "$FULL_LOAD_DIR"
+```
+
+Each run creates:
 
 ```text
-{
-  "source_rows": 100,
-  "reports": 100,
-  "history_rows": 13,
-  "utility_rows": 118,
-  "quality_issues": 0,
-  "output_dir": "own_implementation/generated/sample_load"
-}
+<output directory>/load_3nf.sql
+<output directory>/staging/*.tsv
 ```
 
-The generated files are:
+The generated SQL contains absolute paths to the staging files on the
+computer that generated it. Therefore, each teammate should generate their
+own loader SQL locally rather than sharing a generated SQL file from another
+computer.
 
-```text
-own_implementation/generated/sample_load/load_3nf.sql
-own_implementation/generated/sample_load/staging/*.tsv
-```
+## 5. Load the tables in MySQL Workbench
 
-The generated SQL begins with `USE sf_rent_board;` and loads the staging files
-in foreign-key order. The staging writer represents SQL `NULL` as unquoted
-`\N` and quotes non-null values.
-
-## MySQL Workbench steps
-
-1. Run `own_implementation/schema.sql` in Workbench. This creates the database,
-   tables, constraints, and seeded lookup rows.
-2. Confirm that local loading is enabled on the MySQL server and Workbench
-   connection.
-3. Open and run the complete generated file:
+1. Open and run `own_implementation/schema.sql`. This creates the
+   `sf_rent_board` database, tables, constraints, and seeded lookup rows.
+2. Enable `LOCAL INFILE` for the MySQL server and Workbench connection if it is
+   disabled. The earlier run produced error 3948 until this was enabled.
+3. Open the generated loader file. For the sample, this is:
 
    ```text
    own_implementation/generated/sample_load/load_3nf.sql
    ```
 
-4. Run `own_implementation/validation.sql`.
+   For a full run, use:
 
-The validation run showed successful execution of `USE sf_rent_board`, a
-returned row-count result, zero orphan rows for the foreign-key checks, and
-zero rows for the filing-cycle and location dependency checks. The final
-analysis query returned grouped report counts by submission year and
-occupancy type.
+   ```text
+   own_implementation/generated/load/load_3nf.sql
+   ```
 
-## Viewing every populated table
+4. Run the complete generated SQL file in Workbench.
+5. Use the team's validation queries, if needed, to check row counts and
+   foreign-key integrity. Validation documentation remains on the working
+   branch unless the team decides otherwise.
 
-The bottom section of `validation.sql` contains a `SELECT * ... LIMIT 100`
-statement for every table:
+If a load fails partway through, rerun `schema.sql` before retrying. The schema
+script recreates the database so that the next load starts from an empty,
+consistent state.
+
+## 6. View sample table contents
+
+After a successful sample load, these queries can be run in Workbench:
 
 ```sql
+USE sf_rent_board;
+
 SELECT * FROM ExtractBatch LIMIT 100;
 SELECT * FROM FilingCycle LIMIT 100;
 SELECT * FROM Neighborhood LIMIT 100;
@@ -130,39 +186,22 @@ SELECT * FROM OccupancyHistory LIMIT 100;
 SELECT * FROM QualityIssue LIMIT 100;
 ```
 
-Workbench displays each query's result as a separate result tab. `QualityIssue`
-may return zero rows for this particular 100-row sample; that is a valid result
-and does not mean the table was omitted.
+The exact row counts depend on the CSV snapshot. For the previously tested
+100-row snapshot, the loader reported 100 reports, 13 occupancy-history rows,
+118 utility rows, and zero quality issues. Those are historical example
+outputs, not guaranteed results for the team's final CSV.
 
-## Troubleshooting recorded during the run
-
-- Error 3948 indicated that `LOAD DATA LOCAL INFILE` was disabled. The server
-  variable was enabled with `SET GLOBAL local_infile = 1`, and the Workbench
-  connection was configured with `OPT_LOCAL_INFILE=1` under its Advanced
-  connection settings.
-- Error 1046 indicated that no database was selected. The loader generator was
-  updated to include `USE sf_rent_board;`.
-- The first generated loader produced warnings because the staging `\N` null
-  token was escaped incorrectly. The staging writer and generated `LOAD DATA`
-  escape configuration were corrected, and the sample loader was regenerated.
-
-After a failed or partially completed load, rerun `schema.sql` before trying
-the loader again because `schema.sql` recreates the sample database from an
-empty state.
-
-After a successful reload, these checks should show the expected result:
+Missing dates should be stored as SQL `NULL`, not `0000-00-00`. A quick check
+is:
 
 ```sql
 SELECT COUNT(*) AS total_reports FROM UnitReport;
+
 SELECT COUNT(*) AS nonnull_vacancy_dates
 FROM UnitReport
 WHERE vacancy_date IS NOT NULL;
+
 SELECT COUNT(*) AS null_vacancy_dates
 FROM UnitReport
 WHERE vacancy_date IS NULL;
 ```
-
-For this 100-row sample, the expected values are 100 total reports, 1
-non-null vacancy date, and 99 null vacancy dates. If `UnitReport` returns only
-85 rows or vacancy dates appear as `0000-00-00`, reset the database with
-`schema.sql` and rerun the regenerated loader from the beginning.
