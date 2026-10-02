@@ -137,8 +137,36 @@ computer.
 
 1. Open and run `own_implementation/schema.sql`. This creates the
    `sf_rent_board` database, tables, constraints, and seeded lookup rows.
-2. Enable `LOCAL INFILE` for the MySQL server and Workbench connection if it is
-   disabled. The earlier run produced error 3948 until this was enabled.
+2. Enable `LOCAL INFILE` for both the MySQL server and the Workbench client if
+   it is disabled by following the setup instructions below. Do this before
+   opening or executing the generated loader. The earlier run produced error
+   3948 until both sides were configured.
+
+### Enabling `LOCAL INFILE`
+
+Run this in a MySQL Workbench query tab using an account with permission to
+change global server variables:
+
+```sql
+SHOW GLOBAL VARIABLES LIKE 'local_infile';
+SET GLOBAL local_infile = 1;
+SHOW GLOBAL VARIABLES LIKE 'local_infile';
+```
+
+The final query should show `ON`. Then configure the Workbench client for the
+same connection:
+
+1. Close the SQL editor or disconnect from the connection.
+2. Open **Database > Manage Connections**.
+3. Select the connection and open its **Advanced** settings.
+4. Add `OPT_LOCAL_INFILE=1` to the connection's driver/other parameters,
+   following the format already used by that Workbench version.
+5. Save the connection and reconnect.
+
+If `SET GLOBAL local_infile = 1` fails, the MySQL account does not have the
+required server privilege. A database administrator must enable it, or the
+team must use an approved alternative loading method.
+
 3. Open the generated loader file. For the sample, this is:
 
    ```text
