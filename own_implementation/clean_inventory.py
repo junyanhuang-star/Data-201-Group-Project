@@ -4,6 +4,15 @@
 The script maps spelling variants to canonical values, preserves raw labels,
 splits repeating utility and history values, and writes quality issues instead
 of silently dropping rows.
+
+AI-assistance disclosure:
+
+The data preparation stage heavily relied on AI assistance to implement code
+that was not explicitly covered in the course. AI was used to help determine
+bash commands for finding unique values, identify ways to group inconsistent
+data, and draft preprocessing logic that parses and formats rows. The team
+will review, understand, verify, and modify this implementation before deciding
+whether to use any part of it in the final project.
 """
 
 import argparse

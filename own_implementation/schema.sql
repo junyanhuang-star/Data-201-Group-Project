@@ -1,3 +1,11 @@
+-- AI-ASSISTANCE DISCLOSURE
+-- The initial decision making for this 3NF relational schema was assisted
+-- with AI. AI was not simply used to take the CSV and output a 3NF. Instead,
+-- it was asked to analyze the contents of each row and explain why certain
+-- dependencies that seem reasonable would not work due to the actual contents
+-- of each entry. The team will review, understand, verify, and modify this
+-- schema before deciding whether to use any part of it in the final project.
+
 DROP DATABASE IF EXISTS sf_rent_board;
 CREATE DATABASE sf_rent_board CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs;
 USE sf_rent_board;

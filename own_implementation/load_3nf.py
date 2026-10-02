@@ -11,6 +11,17 @@ This is an import/orchestration aid, not a replacement for ``schema.sql``.
 The schema still owns keys, foreign keys, types, and constraints. Python is
 used for CSV parsing and normalization because those operations are outside
 the main DDL material covered in the course.
+
+AI-assistance disclosure:
+
+The data preparation stage heavily relied on AI assistance to implement code
+that was not explicitly covered in the course. In addition, the loader was
+assisted with AI because loading a CSV onto tables in MySQL Workbench was not
+specifically covered in the course. This loader was considered a practical,
+least-tedious way to clean and load the dataset onto Workbench. The team will
+review, understand, verify, and modify this implementation before deciding
+whether to use any part of it in the final project, and any adopted assistance
+will be properly disclosed.
 """
 
 import argparse
