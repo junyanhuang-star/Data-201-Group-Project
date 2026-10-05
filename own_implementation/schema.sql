@@ -142,6 +142,17 @@ CREATE TABLE BlockAddress (
 -- `bathroom_count` is the number of bathrooms in this residential unit (Int).
 -- `square_footage` is the square footage of the unit.
 -- `occupancy_type` is the occupancy type reported for this residential unit.
+--
+-- Each lookup stores the raw label (a candidate key) and only the values that
+-- cannot be computed from other columns. Flags such as "unparseable" or
+-- "no rent paid" are not stored, because they follow from another column of
+-- the same row and storing them would be a transitive dependency:
+--   unparseable bedroom label     canonical_bedrooms IS NULL
+--   unparseable bathroom label    canonical_bathrooms IS NULL AND NOT is_shared
+--   unknown square footage        min_sqft IS NULL
+--   no rent paid ("$0 ...", "0")  min_rent IS NULL
+-- is_shared and overlaps_other cannot be computed from other columns, so they
+-- stay.
 -- ---------------------------------------------------------------------------
 CREATE TABLE OccupancyType (
   occupancy_type_id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -152,7 +163,6 @@ CREATE TABLE BedroomLabel (
   bedroom_label_id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   raw_label VARCHAR(40) NOT NULL UNIQUE,
   canonical_bedrooms TINYINT UNSIGNED NULL,
-  is_unparseable BOOLEAN NOT NULL DEFAULT FALSE,
   CHECK (canonical_bedrooms IS NULL OR canonical_bedrooms BETWEEN 0 AND 10)
 );
 
@@ -161,7 +171,6 @@ CREATE TABLE BathroomLabel (
   raw_label VARCHAR(80) NOT NULL UNIQUE,
   canonical_bathrooms DECIMAL(3,1) NULL,
   is_shared BOOLEAN NOT NULL DEFAULT FALSE,
-  is_unparseable BOOLEAN NOT NULL DEFAULT FALSE,
   CHECK (canonical_bathrooms IS NULL OR canonical_bathrooms BETWEEN 0 AND 10)
 );
 
@@ -170,7 +179,6 @@ CREATE TABLE SquareFootageBand (
   raw_label VARCHAR(40) NOT NULL UNIQUE,
   min_sqft SMALLINT UNSIGNED NULL,
   max_sqft SMALLINT UNSIGNED NULL,
-  is_unknown BOOLEAN NOT NULL DEFAULT FALSE,
   CHECK (max_sqft IS NULL OR min_sqft IS NULL OR max_sqft >= min_sqft)
 );
 
@@ -179,7 +187,6 @@ CREATE TABLE RentBand (
   raw_label VARCHAR(50) NOT NULL UNIQUE,
   min_rent DECIMAL(8,2) NULL,
   max_rent DECIMAL(8,2) NULL,
-  is_no_rent_paid BOOLEAN NOT NULL DEFAULT FALSE,
   overlaps_other BOOLEAN NOT NULL DEFAULT FALSE,
   CHECK (max_rent IS NULL OR min_rent IS NULL OR max_rent >= min_rent)
 );
@@ -197,6 +204,22 @@ CREATE TABLE RentBand (
 -- `unit_count` is the total number of residential units in this property (Int),
 -- but remains a reported fact on this row unless a stable property key is
 -- demonstrated.
+--
+-- Move-in timing is stored exactly one way. When a valid date exists, the
+-- source year column is derivable from it and is not stored again (storing
+-- both would be a transitive dependency: unique_id -> date -> year). At most
+-- one of these three columns is populated:
+--   occupancy_or_vacancy_date  a valid date
+--   occupancy_year             a plausible year with no usable date
+--   date_unknown_text          the form's "Year Unknown (...)" answers, or any
+--                              other text (for example "20204"); the latter
+--                              is also logged in quality_issues.csv
+-- other_utilities_raw is the verbatim free-text answer. ReportUtility rows are
+-- parsed from it, but no column of this table determines it, so keeping the
+-- source text does not break 3NF.
+-- The loader guarantees this before staging. LOAD DATA turns a CHECK failure
+-- into a warning and skips the row, so the generated load script compares
+-- loaded and staged row counts to catch any row that is dropped this way.
 -- ---------------------------------------------------------------------------
 CREATE TABLE UnitReport (
   -- The notes identify unique_id as the key attribute for each submission.
@@ -231,7 +254,9 @@ CREATE TABLE UnitReport (
   FOREIGN KEY (sqft_band_id) REFERENCES SquareFootageBand(sqft_band_id),
   FOREIGN KEY (rent_band_id) REFERENCES RentBand(rent_band_id),
   CHECK (year_property_built IS NULL OR year_property_built BETWEEN 1800 AND 2030),
-  CHECK (occupancy_year IS NULL OR occupancy_year BETWEEN 1900 AND 2026)
+  CHECK (occupancy_year IS NULL OR occupancy_year BETWEEN 1900 AND 2026),
+  CHECK ((occupancy_or_vacancy_date IS NOT NULL) + (occupancy_year IS NOT NULL)
+       + (date_unknown_text IS NOT NULL) <= 1)
 );
 
 -- ---------------------------------------------------------------------------
@@ -239,6 +264,8 @@ CREATE TABLE UnitReport (
 -- The notes identify four Y/N utility fields and an unspecified-utilities
 -- field. The normalized design represents included utilities as rows so a
 -- report can have multiple utilities while preserving the original free text.
+-- Free text that names no known utility becomes an `other` row, even when a
+-- checkbox was also ticked. "none"/"n/a" style answers produce no row.
 -- ---------------------------------------------------------------------------
 CREATE TABLE Utility (
   utility_id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -259,6 +286,8 @@ CREATE TABLE ReportUtility (
 -- OccupancyHistory
 -- `occupancy_or_vacancy_date_history` is the log description of occupancy.
 -- Each history event belongs to one report and is stored as an atomic child row.
+-- A range that ends before it starts is kept as filed; "reversed" is computed
+-- as end_date < start_date rather than stored, since it follows from the dates.
 -- ---------------------------------------------------------------------------
 CREATE TABLE OccupancyHistory (
   history_id BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -267,27 +296,18 @@ CREATE TABLE OccupancyHistory (
   range_type VARCHAR(40) NULL,
   start_date DATE NULL,
   end_date DATE NULL,
-  is_reversed BOOLEAN NOT NULL DEFAULT FALSE,
   UNIQUE (unique_id, seq_no),
   FOREIGN KEY (unique_id) REFERENCES UnitReport(unique_id)
 );
 
 -- ---------------------------------------------------------------------------
--- QualityIssue
--- Invalid or ambiguous source values are recorded here rather than silently
--- removed. This supports discussion of the data-cleaning decisions during the
--- presentation and makes the preprocessing auditable.
+-- Data-quality problems are not stored in the database. Every source row is
+-- loaded; a value that cannot be stored (for example a date in year 0001) is
+-- set to NULL, and load_3nf.py writes each problem to quality_issues.csv
+-- (unique_id, column, issue code, raw value, description). Rows are not
+-- deleted: most problems are one disagreeing field on an otherwise valid
+-- filing, and dropping those filings would bias the analysis.
 -- ---------------------------------------------------------------------------
-CREATE TABLE QualityIssue (
-  issue_id BIGINT AUTO_INCREMENT PRIMARY KEY,
-  unique_id BIGINT NOT NULL,
-  column_name VARCHAR(80) NOT NULL,
-  issue_code VARCHAR(60) NOT NULL,
-  raw_value VARCHAR(255) NULL,
-  issue_detail VARCHAR(255) NULL,
-  FOREIGN KEY (unique_id) REFERENCES UnitReport(unique_id),
-  INDEX (issue_code), INDEX (column_name)
-);
 
 INSERT INTO FilingCycle VALUES
  (2022,'Housing Inventory - Unit information (2022)'),
@@ -296,14 +316,19 @@ INSERT INTO FilingCycle VALUES
  (2025,'Housing Inventory - Unit information (2025)'),
  (2026,'Housing Inventory - Unit information (2026)');
 
-INSERT INTO OccupancyType(name) VALUES
- ('Occupied by non-owner'), ('Vacant'), ('Occupied by owner'), ('Non-Residential');
+-- IDs are explicit because load_3nf.py mirrors them.
+INSERT INTO OccupancyType(occupancy_type_id, name) VALUES
+ (1,'Occupied by non-owner'), (2,'Vacant'), (3,'Occupied by owner'), (4,'Non-Residential');
 
 INSERT INTO SupervisorDistrict(district_id)
  SELECT n FROM (SELECT 1 n UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4
  UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8
  UNION ALL SELECT 9 UNION ALL SELECT 10 UNION ALL SELECT 11) d;
 
-INSERT INTO Utility(name) VALUES
- ('water_sewer'), ('natural_gas'), ('electricity'), ('refuse_recycling'),
- ('heat'), ('internet'), ('parking'), ('storage'), ('pest_control'), ('other');
+-- IDs 1-10 keep their original values; 11-16 were added for the wider
+-- free-text patterns in clean_inventory.py.
+INSERT INTO Utility(utility_id, name) VALUES
+ (1,'water_sewer'), (2,'natural_gas'), (3,'electricity'), (4,'refuse_recycling'),
+ (5,'heat'), (6,'internet'), (7,'parking'), (8,'storage'), (9,'pest_control'),
+ (10,'other'), (11,'hot_water'), (12,'cable'), (13,'laundry'), (14,'janitorial'),
+ (15,'solar'), (16,'all_utilities');
