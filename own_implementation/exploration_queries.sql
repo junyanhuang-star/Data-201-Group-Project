@@ -22,9 +22,7 @@ JOIN BathroomLabel AS bath ON ur.bathroom_label_id = bath.bathroom_label_id
 -- The lookup tables have a boolean 'is_unparseable' which means that original raw labels
 -- could not be mapped to a numerical value, so it is excluded from the list.
 -- If the row entry did not have an original raw label, they would be excluded entirely as well
-WHERE bed.is_unparseable = FALSE
-    AND bath.is_unparseable = FALSE
-    AND bed.canonical_bedrooms IS NOT NULL
+WHERE bed.canonical_bedrooms IS NOT NULL
     AND bath.canonical_bathrooms IS NOT NULL
 -- Groups the rows first by bedrooms, then further subgroup based on bathroom count
 GROUP BY bed.canonical_bedrooms, bath.canonical_bathrooms
@@ -50,7 +48,7 @@ JOIN RentBand AS rb ON ur.rent_band_id = rb.rent_band_id
 JOIN SquareFootageBand AS sb ON ur.sqft_band_id = sb.sqft_band_id
 -- The lookup table for SquareFootageBand has a boolean 'is_unknown' which is flagged for rows
 -- that could not be mapped to a valid range.
-WHERE sb.is_unknown = FALSE
+WHERE sb.min_sqft IS NOT NULL
 -- The tables are grouped by the rent range and square footage ranges combinations
 GROUP BY rb.raw_label, sb.raw_label
 -- Rows will be ordered with highest count to lowest
@@ -80,11 +78,9 @@ JOIN RentBand AS rb ON ur.rent_band_id = rb.rent_band_id
 JOIN BedroomLabel AS bed ON ur.bedroom_label_id = bed.bedroom_label_id
 JOIN BathroomLabel  AS bath ON ur.bathroom_label_id = bath.bathroom_label_id
 -- The rows with values that cannot be looked up and converted to normalized values are excluded entirely
-WHERE bed.is_unparseable = FALSE
-    AND bath.is_unparseable = FALSE
-    AND bed.canonical_bedrooms IS NOT NULL
+WHERE bed.canonical_bedrooms IS NOT NULL
     AND bath.canonical_bathrooms IS NOT NULL
-    AND rb.is_no_rent_paid = FALSE
+    AND rb.min_rent IS NOT NULL
 -- Create groups based on the combination of rent ranges, bedroom ranges, bathroom ranges
 GROUP BY rb.raw_label, bed.canonical_bedrooms, bath.canonical_bathrooms
 -- Without the subquery, the report_count of all combinations will be returned.
@@ -96,12 +92,10 @@ HAVING COUNT(*) >= ALL (
     JOIN RentBand AS rb2 ON ur2.rent_band_id = rb2.rent_band_id
     JOIN BedroomLabel AS bed2 ON ur2.bedroom_label_id = bed2.bedroom_label_id
     JOIN BathroomLabel  AS bath2 ON ur2.bathroom_label_id = bath2.bathroom_label_id
-    WHERE ur2.rent_band_id = rb.rent_band_id
-        AND bed2.is_unparseable = FALSE
-        AND bath2.is_unparseable = FALSE
-        AND bed2.canonical_bedrooms IS NOT NULL
+    WHERE bed2.canonical_bedrooms IS NOT NULL
         AND bath2.canonical_bathrooms IS NOT NULL
-        AND rb2.is_no_rent_paid = FALSE
+        AND rb2.min_rent IS NOT NULL
+        AND ur2.rent_band_id = rb.rent_band_id
     GROUP BY bed2.canonical_bedrooms, bath2.canonical_bathrooms
 )
 -- Rows will be ordered with highest count to lowest
@@ -133,12 +127,10 @@ JOIN RentBand AS rb ON ur.rent_band_id = rb.rent_band_id
 JOIN BedroomLabel AS bed ON ur.bedroom_label_id = bed.bedroom_label_id
 JOIN BathroomLabel  AS bath ON ur.bathroom_label_id = bath.bathroom_label_id
 JOIN SquareFootageBand AS sb ON ur.sqft_band_id = sb.sqft_band_id
-WHERE bed.is_unparseable = FALSE
-    AND bath.is_unparseable = FALSE
-    AND bed.canonical_bedrooms IS NOT NULL
+WHERE bed.canonical_bedrooms IS NOT NULL
     AND bath.canonical_bathrooms IS NOT NULL
-    AND rb.is_no_rent_paid = FALSE
-    AND sb.is_unknown = FALSE
+    AND sb.min_sqft IS NOT NULL
+    AND rb.min_rent IS NOT NULL
 GROUP BY rb.raw_label, bed.canonical_bedrooms, bath.canonical_bathrooms, sb.raw_label
 -- Only the rows that have a higher count than the average count among the combinations
 -- The subquery used is almost identical to the outer query, the difference is that the average is
@@ -153,12 +145,10 @@ HAVING COUNT(*) > (
         JOIN BedroomLabel AS bed2 ON ur2.bedroom_label_id = bed2.bedroom_label_id
         JOIN BathroomLabel AS bath2 ON ur2.bathroom_label_id = bath2.bathroom_label_id
         JOIN SquareFootageBand AS sb2 ON ur2.sqft_band_id = sb2.sqft_band_id
-        WHERE bed2.is_unparseable = FALSE
-            AND bath2.is_unparseable = FALSE
-            AND bed2.canonical_bedrooms IS NOT NULL
+        WHERE bed2.canonical_bedrooms IS NOT NULL
             AND bath2.canonical_bathrooms IS NOT NULL
-            AND rb2.is_no_rent_paid = FALSE
-            AND sb2.is_unknown = FALSE
+            AND sb2.min_sqft IS NOT NULL
+            AND rb2.min_rent IS NOT NULL
         GROUP BY rb2.raw_label, bed2.canonical_bedrooms, bath2.canonical_bathrooms, sb2.raw_label
     ) AS profile
 )
