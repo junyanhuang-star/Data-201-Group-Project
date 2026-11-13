@@ -1,0 +1,46 @@
+bedroom_label_id	raw_label	canonical_bedrooms
+"1"	"$D$61"	\N
+"2"	"0"	"0"
+"3"	"0A"	\N
+"4"	"0AH"	\N
+"5"	"0U"	\N
+"6"	"1"	"1"
+"7"	"1 Bedroom"	"1"
+"8"	"1 bed"	"1"
+"9"	"1 bedroom"	"1"
+"10"	"1A"	\N
+"11"	"1T"	\N
+"12"	"1U"	\N
+"13"	"1bedroom"	"1"
+"14"	"1br"	"1"
+"15"	"2"	"2"
+"16"	"2 bedriin"	"2"
+"17"	"2 bedroom"	"2"
+"18"	"2 bedroomq"	"2"
+"19"	"2A"	\N
+"20"	"2AH"	\N
+"21"	"2S"	\N
+"22"	"2T"	\N
+"23"	"2U"	\N
+"24"	"2br"	"2"
+"25"	"2brd"	"2"
+"26"	"3"	"3"
+"27"	"3 bedroom"	"3"
+"28"	"3bedroom"	"3"
+"29"	"5+"	"5"
+"30"	"Five-Bedroom"	"5"
+"31"	"Four-Bedroom"	"4"
+"32"	"Garage"	\N
+"33"	"One Bedroom"	"1"
+"34"	"One-Bedroom"	"1"
+"35"	"One-bedroom"	"1"
+"36"	"Studio"	"0"
+"37"	"Studio (sm)"	"0"
+"38"	"Three-Bedroom"	"3"
+"39"	"Two Bedroom"	"2"
+"40"	"Two-Bedroom"	"2"
+"41"	"Two-bedroom"	"2"
+"42"	"Vacant"	\N
+"43"	"Zero -(Studio)"	"0"
+"44"	"Zero-(Studio)"	"0"
+"45"	"studio"	"0"
