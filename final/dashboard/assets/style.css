@@ -1,0 +1,11 @@
+body { margin: 0; background: #f6f6f4; font-family: Arial, sans-serif; color: #0b0b0b; }
+.page { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+.page h1 { font-size: 26px; margin: 0 0 4px; }
+.subtitle { color: #52514e; margin: 0 0 20px; }
+.card { background: #fff; border: 1px solid #e3e3df; border-radius: 10px; padding: 16px 18px; margin: 16px 0; }
+.caption { color: #52514e; font-size: 13px; margin: 6px 0 0; }
+.filter-row { background: #fff; border: 1px solid #e3e3df; border-radius: 10px; padding: 12px 18px; margin-top: 16px; }
+.filter-label { font-size: 13px; font-weight: bold; color: #52514e; display: block; margin-bottom: 6px; }
+.card .filter-label { margin-top: 0; }
+.card .Select, .card .dash-dropdown { max-width: 320px; }
+input[type=radio], input[type=checkbox] { margin-left: 14px; }
